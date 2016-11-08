@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1"/>
+    <title>Show Gril</title>
+    <link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/swiperControl.js"></script>
+    <script src="js/main.js"></script>
+    <!--自适应-->
+    <script type="text/javascript">
+        (function () {
+            var scale = 1 / devicePixelRatio;
+            document.querySelector('meta[name="viewport"]').setAttribute('content', 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+            var reSize = function () {
+                var deviceWidth = document.documentElement.clientWidth > 1536 ? 1536 : document.documentElement.clientWidth;
+                window.calSize = deviceWidth / 6.4;
+                document.documentElement.style.fontSize = calSize + 'px';
+            };
+            reSize();
+            window.addEventListener("resize",function () {
+                reSize();
+            })
+        })();
+    </script>
+</head>
+<body>
+
+<!--判断是否加载封面-->
+<script>
+    if (!localStorage.isOpened) {
+        localStorage.isOpened = true;
+        $.ajax({
+            async:false,
+            url:'front.html',
+            success:function (data) {
+                document.body.innerHTML = data;
+            }
+        })
+    }
+</script>
+
+
+<!--内容swiper-->
+<div class="swiper-container containerContent">
+    <div class="swiper-wrapper wrapperContent">
+
+        <!--首页-->
+        <div class="swiper-slide index">
+            <p class="header">Show Gril</p>
+            <div class="topSearch"><input type="text" placeholder="请输入搜索内容"></div>
+            <div class="ctBox">
+                <!--2重swiper  轮播图-->
+                <div class="swiper-container containerCarousel">
+                    <div class="swiper-wrapper wrapperCarousel">
+                        <div class="swiper-slide carouselIMG"><img src="#"></div>
+                        <div class="swiper-slide carouselIMG"><img src="#"></div>
+                        <div class="swiper-slide carouselIMG"><img src="#"></div>
+                        <div class="swiper-slide carouselIMG"><img src="#"></div>
+                    </div>
+                    <div class="swiper-pagination carouselBar"></div>
+                </div>
+                <!--动态添加块-->
+            </div>
+        </div>
+        <!--分类-->
+        <div class="swiper-slide classify">
+            <p class="header">分类</p>
+            <div class="topSearch"><input type="text" placeholder="请输入搜索内容"></div>
+            <div class="goodsClassify">
+                <div class="goodsClassifyAll">全部</div>
+                <div class="detailBox">
+                    <!--动态添加区-->
+                </div>
+            </div>
+
+
+        </div>
+        <!--购物车-->
+        <div class="swiper-slide shoppingTrolley">
+            <p class="header">购物车<span class="topbtn">去结算</span></p>
+            <div class="total">
+                <span>商品数量：</span><span class="goodsNum">0</span>
+                <span>应付总额(不含运费)：</span><span class="totalPrice">￥0</span>
+            </div>
+            <div class="sTBox">
+                <!--动态添加区-->
+            </div>
+        </div>
+        <!--我的秀-->
+        <div class="swiper-slide myShow">
+            <!--2层swiper-->
+            <div class="swiper-container containerMyShow">
+                <div class="swiper-wrapper wrapperMyShow">
+                    <!--封面-->
+                    <div class="swiper-slide myShowAll">
+                        <p class="header">我的秀</p>
+                        <div class="userInfo">
+                            <img src="http://datainfo.duapp.com/shopdata/userimgs/userimg.jpg" class="avatar">
+                            <p>昵称：<span class="nickname">未知</span></p>
+                            <button class="toLogin">登录</button>
+                            <button class="toRegister">注册</button>
+                        </div>
+                        <ul>
+                            <li class="toOrder">我的订单</li>
+                            <li class="toCoupon">我的优惠券</li>
+                            <li class="toRecords">浏览记录</li>
+                            <li class="toCollection">我的收藏</li>
+                        </ul>
+                    </div>
+                    <!--登录-->
+                    <div class="swiper-slide login">
+                        <p class="header"><span class="toMyShowAll"></span>登录<span class="topbtn toRegister">注册</span></p>
+                        <form>
+                            <input type="text" placeholder="帐号" id="loginID">
+                            <input type="password" placeholder="密码" id="loginPW">
+                            <input type="checkbox" id="check" checked class="on">
+                            <label for="check" id="lab">记住密码</label>
+                            <a href="#">忘记密码？</a>
+                            <div class="btnLogin"> 登录</div>
+                        </form>
+                    </div>
+                    <!--注册-->
+                    <div class="swiper-slide register">
+                        <p class="header"><span class="toMyShowAll"></span>注册<span class="topbtn toLogin">登录</span></p>
+                        <form>
+                            <input type="text" placeholder="帐号" id="registerID">
+                            <input type="password" placeholder="密码" id="registerPW">
+                            <input type="password" placeholder="重复密码" id="registerPW2">
+                            <div id="btnRegister">同意服务协议并注册</div>
+                        </form>
+                    </div>
+                    <!--订单-->
+                    <div class="swiper-slide myOrder">
+                        <p class="header"><span class="toMyShowAll"></span>我的订单</p>
+                    </div>
+                    <!--优惠券-->
+                    <div class="swiper-slide myCoupon">
+                        <p class="header"><span class="toMyShowAll"></span>我的优惠券</p>
+                    </div>
+                    <!--浏览记录-->
+                    <div class="swiper-slide myRecords">
+                        <p class="header"><span class="toMyShowAll"></span>浏览记录</p>
+                    </div>
+                    <!--收藏-->
+                    <div class="swiper-slide myCollection">
+                        <p class="header"><span class="toMyShowAll"></span>我的收藏</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--更多-->
+        <div class="swiper-slide more">
+            <p class="header"><span class="inLeft"></span>更多</p>
+            <ul>
+                <li>常见问题</li>
+                <li>系统设置</li>
+                <li>软件更新</li>
+                <li>扫描二维码</li>
+            </ul>
+            <ul>
+                <li>我要提意见</li>
+                <li>关于</li>
+            </ul>
+            <div class="loginOrExit">请登录</div>
+        </div>
+
+    </div>
+
+    <!--滚动条-->
+    <div class="swiper-scrollbar" id="scBar"></div>
+    <div class="bar"><span></span><span></span><span></span><span></span><span></span></div>
+
+</div>
+
+<!--引入swiper-->
+<script src="js/swiper-3.3.1.min.js"></script>
+<script src="js/swiper.animate1.0.2.min.js"></script>
+<!--初始化swiper-->
+<script src="js/initSwiper.js"></script>
+</body>
+</html>

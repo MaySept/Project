@@ -1,0 +1,476 @@
+*{margin: 0;  padding: 0;border: 0;outline: 0;text-decoration: none;list-style: none;}
+html, body {
+    position: relative;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+body {
+    background: #eee;
+    color: #000;
+    font-size: 0.16rem;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f3f7;
+    /*overflow-y: scroll;*/
+}
+
+
+.wrapperStartInterface .swiper-slide img{
+    position: absolute;
+}
+
+.frontCover img{
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+.fimg1{  width: 2.56rem;  top: 2rem;  }
+.fimg2{  width: 2.6rem;  top: 6rem;  }
+.fimg3{  width: 100%;  bottom:0;  }
+
+.s1img1{
+    display: block;
+    width: 100%;
+    top: 0.8rem;
+}
+.s1img2{ top:7.2rem; left:0;right:0;margin: auto;width:3.4rem;}
+.s1img3{ top:8.5rem;  left: 0.5rem;width:3.6rem;}
+
+.start2 img,.start3 img,.start4 img{left:0;right:0;margin: auto;}
+.s2img1{top:1rem;width: 0.5rem;}
+.s2img2{top:2.8rem;width: 2rem;}
+.s2img3{top:4rem;width: 2.3rem;}
+.start2 .s2img4{bottom:1rem;left:-0.6rem;width: 4.2rem;}
+
+.s3img1{top:1.6rem;width: 2.5rem;}
+.s3img2{top:2.6rem;width: 4.5rem;}
+.s3img3{bottom:1.3rem;width: 4rem;}
+
+.s4img1{top:2rem;width: 0.5rem;}
+.s4img2{top:4.6rem;width: 4.8rem;}
+.s4img3{bottom:1.3rem;width: 2.9rem;}
+/*.containerContent{ display: none; }*/
+
+
+.header{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 1rem;
+    font-size: 0.44rem;
+    line-height: 1rem;
+    text-align: center;
+    background: -webkit-linear-gradient(top,#f9628b,#d7114f);
+    color: #fff;
+    border-bottom: 0.02rem solid #666;
+}
+.header .toMyShowAll{
+    position: absolute;
+    width: 0.5rem;
+    height: 0.3rem;
+    background: url("../img/arrow.png") no-repeat center center;
+    background-size: 0.5rem 0.3rem;
+    left:0.3rem;top:0.35rem;
+}
+.header>.inRight{
+    position: absolute;
+    right: 0.5rem;
+    top:0.32rem;
+    width: 0.8rem;
+    height:0.4rem;
+    font-size: 0.2rem;
+    line-height: 0.4rem;
+    border-radius: 0.1rem;
+    border:0.01rem solid #ccc;
+    background: -webkit-linear-gradient(top,#f9628b,#d7114f);
+}
+.containerCarousel{
+    position: relative;
+    width: 100%;
+    height: 2.5rem;
+    border-bottom: 0.02rem solid #666;
+}
+.carouselIMG{overflow: hidden;}
+.carouselIMG img{  width: 100%;  }
+
+
+.topSearch{
+    width: 100%;
+    height: 0.9rem;
+    background-color: #525358;
+    overflow: hidden;
+}
+.topSearch input{
+    display: block;
+    margin: 0.16rem auto;
+    width: 5.9rem;
+    height: 0.56rem;
+    font-size: 0.24rem;
+    border-radius: 0.28rem;
+    color: #949496;
+    text-indent: 0.7rem;
+    background: url(../img/search.png) no-repeat 0.2rem 0.1rem;
+    background-color: #fff;
+}
+
+
+.indexGoods{
+    position: relative;
+    width: 100%;
+    height: 2.2rem;
+    border:0;
+    border-bottom: 0.02rem solid #666;
+}
+.indexGoods>img{
+    float: left;
+    width: 1.75rem;
+    height: 1.75rem;
+    margin: 0.225rem;
+}
+.indexGoodsRight{
+    position: relative;
+    float: left;
+    width: 3.9rem;
+    height: 1.6rem;
+    margin-top: 0.29rem;
+}
+.indexGoodsRight .tit{
+    position: absolute;
+    top:0;left:0;
+    display: block;
+    height: 0.75rem;
+    width: 100%;
+    font-size:0.3rem;
+    overflow: hidden;
+}
+
+.price{
+    float: left;
+    margin-top: 0.8rem;
+    margin-right:0.3rem ;
+    font-size: 0.35rem;
+    color:#f42a74;
+}
+.originalPrice{
+    float: left;
+    margin-top: 0.88rem;
+    font-size: 0.24rem;
+    color: #bcbabb;
+    text-decoration: line-through;
+}
+.sell{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 0.26rem;
+    font-weight: 700;
+}
+.buy{
+    position: absolute;
+    bottom:0;
+    right:0;
+    width: 1.2rem;
+    height: 0.55rem;
+    background: url("../img/shop.png") no-repeat center center;
+    background-color: #e43369;
+    border-radius: 0.1rem;
+}
+.ctBox,.detailBox,.sTBox {
+    overflow-y: scroll;
+}
+
+
+
+
+.bar{
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    height: 1rem;
+    background-color: #484850;
+    background-image: url("../img/bottom.png");
+    background-size: 100% 1rem;
+}
+
+.bar span{
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+
+#scBar{
+    bottom: 0.95rem;
+}
+
+#scBar .swiper-scrollbar-drag{
+    background-color: #e4366b;
+}
+
+.goodsClassify{
+    position: relative;
+    width: 100%;
+    font-size: 0.4rem;
+    line-height: 0.9rem;
+}
+.goodsClassifyAll{
+    width: 100%;
+    height: 0.9rem;
+    border-bottom: 0.02rem solid #ccc;
+    text-indent: 0.2rem;
+    background-image: url("../img/arrowRight.png");
+    background-size: 0.3rem;
+    background-repeat: no-repeat;
+    background-position: 5.8rem center;
+}
+.detailedClassification{
+    width: 100%;
+    height: 0.9rem;
+    border-bottom: 0.02rem solid #ccc;
+    text-indent: 0.4rem;
+    background-image: url("../img/arrowRight.png");
+    background-size: 0.3rem;
+    background-repeat: no-repeat;
+    background-position: 5.8rem center;
+}
+.detailBox{display: none;}
+
+.more ul{
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 5.5rem;
+    border:0.02rem solid #dedede;
+    border-radius: 0.1rem;
+}
+.more ul li{
+    width: 100%;
+    height: 0.9rem;
+    border-top:0.02rem solid #dedede;
+    margin-top: -0.02rem;
+    font-size: 0.4rem;
+    line-height: 0.9rem;
+    text-indent: 0.5rem;
+    background-image: url("../img/arrowRight.png");
+    background-size: 0.3rem;
+    background-repeat: no-repeat;
+    background-position: 5rem center;
+}
+
+.more ul:nth-child(2){top:1.4rem;}
+.more ul:nth-child(3){top:6rem;}
+
+.loginOrExit{
+    position: absolute;
+    top:8.5rem;
+    width:5.5rem;
+    height: 1rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: -webkit-linear-gradient(top,#f9628b,#d7114f);
+    border-radius: 0.1rem;
+    text-align: center;
+    line-height: 1rem;
+    font-size: 0.4rem;
+    color: #fff;
+}
+.sTBox{
+    position: absolute;
+    top:1.9rem;
+    width: 100%;
+}
+.total{
+    width: 100%;
+    height:0.9rem;
+    background-color: #333;
+}
+.total span{
+    font-size: 0.3rem;
+    color: #fff;
+    line-height: 0.9rem;
+}
+.total span:nth-child(1){  margin-left: 0.3rem;  }
+.total span:nth-child(3){  margin-left: 0.2rem;  }
+.total .totalPrice{color: red;font-size: 0.35rem;font-weight: bold;}
+
+.containerMyShow{
+    position: absolute;
+    top: 0;
+}
+.userInfo{
+    width: 5.6rem;
+    height: 1.8rem;
+    margin: 0.8rem auto;
+    position: relative;
+    font-size: 0.34rem;
+    overflow: hidden;
+}
+.avatar{
+    float: left;
+    width: 1.7rem;
+    height: 1.7rem;
+    margin-right: 0.3rem;
+    border-radius: 0.2rem;
+}
+.userInfo>p{
+    margin: 0.3rem 0 0.3rem 0;
+    font-weight: bold;
+}
+.userInfo>button{
+    width: 1.1rem;
+    height: 0.6rem;
+    border-radius: 0.1rem;
+    background-color: #e83c6e;
+    margin-right: 0.4rem;
+    text-align: center;
+    line-height: 0.6rem;
+    box-shadow: 0 -0.02rem 0.05rem #999;
+    font-size: 0.34rem;
+    color:#fff;
+    font-weight: bolder;
+}
+.myShowAll>ul{
+    position: relative;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 5.5rem;
+    border: 0.02rem solid #dedede;
+    border-radius: 0.1rem;
+}
+.myShowAll>ul>li{
+    width: 100%;
+    height: 0.9rem;
+    border-top: 0.02rem solid #dedede;
+    margin-top: -0.02rem;
+    font-size: 0.4rem;
+    line-height: 0.9rem;
+    text-indent: 0.5rem;
+    background-image: url(../img/arrowRight.png);
+    background-size: 0.3rem;
+    background-repeat: no-repeat;
+    background-position: 5rem center;
+}
+.topbtn{
+    position: absolute;
+    top:0.3rem;
+    right:0.25rem;
+    width: 1.1rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    color: #fff;
+    font-size: 0.24rem;
+    text-align: center;
+    border-radius: 0.1rem;
+    box-shadow: 0 0 0.1rem #666;
+}
+
+form{
+    width: 5.7rem;
+    height: 5rem;
+    margin: 2rem auto;
+    font-size: 0.34rem;
+}
+
+form input:not([type=checkbox]){
+    font-size: 1em;
+    height:0.8rem;
+    width: 100%;
+    border: 0;
+    border-radius: 0.2rem;
+    text-indent: 0.2rem;
+    margin-bottom: 0.4rem;
+    box-shadow: 0 0.01rem 0.1rem #ccc inset;
+}
+
+form>div{
+    margin-top: 0.3rem;
+    text-align: center;
+    width: 100%;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    background-color: #ec4273;
+    color:#fff;
+    border-radius: 0.2rem;
+    box-shadow: 0 0 0.05rem #666;
+}
+#check{
+    display: block;
+    float: left;
+    width: 0.34rem;
+    height: 0.34rem;
+    margin: 0.05rem 0.2rem 0 0.3rem;
+}
+#lab{
+    font-size: 0.34rem;
+    float: left;
+    margin-right: 1.5rem;
+}
+.btnLogin{
+    margin-top: 0.6rem;
+}
+
+.shopBagGoods{
+    position: relative;
+    width: 100%;
+    height: 2.2rem;
+    border: 0;
+    border-bottom: 0.02rem solid #666;
+    font-size: 0.3rem;
+    background-color: #fff;
+}
+
+.shopIMG{
+    float: left;
+    width: 1.75rem;
+    height: 1.75rem;
+    margin: 0.225rem;
+}
+.shopIMG img{
+    width: 100%;
+    height: 100%;
+}
+.shopInfo{
+    float: left;
+    margin: 0.225rem 0;
+    width: 4rem;
+    height: 1.75rem;
+}
+.shopInfo p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0.07rem 0;
+}
+
+.shopPrice{color: red;}
+.numReduce,.numAdd,.shopNum {
+    display: inline-block;
+    margin: 0 0.05rem;
+    width: 0.6rem;
+    height: 0.33rem;
+    text-align: center;
+    border:0.01rem solid black;
+    border-radius: 0.05rem;
+}
+.numReduce,.numAdd{
+    background-color: #949496;
+    color:#fff;
+    font-weight: bolder;
+}
