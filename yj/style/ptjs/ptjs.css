@@ -1,0 +1,249 @@
+
+
+body { font: normal 100% "微软雅黑", Arial, Helvetica, sans-serif; color: #232323; background:#FFF; font-size:13px; margin:0; padding:0; -webkit-text-size-adjust: none }
+a { text-decoration: none; color: #666666; border:none; }
+.clear { clear: both; }
+h1, h2, h3, h4,form{ margin: 0; padding: 0; }
+ul, li, dl, dt, dd { margin:0; padding:0; list-style:none; }
+img { border:none; }
+
+
+div.clear{
+    font: 0 Arial; line-height:0;
+    height:0;
+    overflow:hidden;
+    clear:both;
+}
+
+.Header .nav-in li:nth-child(2) a{color: #e87e30;  border-bottom-color: #e87e30;}
+
+
+.Banner{ width:100%; min-width:1136px;  margin-top:80px; text-align:center; color:#FFF; height:165px;}
+
+
+.PingShowBox{ width:1136px; margin:15px auto 50px;}
+.PingShowBox .PingShowItem{ border-bottom:solid #dfddde 1px; padding-bottom:15px; }
+.PingShowBox .PingShowItem.lst{ border-bottom:none;}
+.PingShowBox .PingTit{ padding-top:40px; text-align:center;}
+.PingShowBox .PingTit span{ line-height:45px; font-size:30px; color:#26d7bd; padding:2px 30px; margin:0 auto; border:solid #26d7bd 1px; letter-spacing:1px;}
+.PingShowBox .PingShowBody{ color:#a3a3a3; line-height:30px; font-size:16px; padding-top:20px; padding-bottom:20px; overflow:auto; text-align:center;}
+.PingShowBox .PingImg{ text-align:center;}
+.PingShowBox .PingImg img{  max-width:1150px; margin:15px 0;}
+.PingShowBox .PingShowItem.lst .PingImg img{ margin:65px auto;}
+
+.PingShowBox .PingImg .Liness span{ display:inline-block; width:145px; height:135px; background:url(../../images/ptjs/pingfangs_h.png) -40px -40px no-repeat;}
+.PingShowBox .PingImg .Liness span:hover{ background:url(../../images/ptjs/pingfangs.png) -40px -40px no-repeat;}
+
+.PingShowBox .PingImg .Liness span.PingImg2{ background-position:-165px -40px;}
+.PingShowBox .PingImg .Liness span.PingImg3{ background-position:-300px -40px;}
+.PingShowBox .PingImg .Liness span.PingImg4{ background-position:-445px -40px;}
+.PingShowBox .PingImg .Liness span.PingImg5{ background-position:-610px -40px;}
+.PingShowBox .PingImg .Liness span.PingImg6{ background-position:-40px -175px;}
+.PingShowBox .PingImg .Liness span.PingImg7{ background-position:-165px -175px;}
+.PingShowBox .PingImg .Liness span.PingImg8{ background-position:-300px -175px;}
+.PingShowBox .PingImg .Liness span.PingImg9{ background-position:-445px -175px;}
+.PingShowBox .PingImg .Liness span.PingImg10{ background-position:-610px -175px;}
+
+
+.PingShowBox .PingImgList span{ display:inline-block; background:url(../../images/ptjs/juimg.png) left top no-repeat; width:205px; height:200px;/* cursor:pointer;*/}
+.PingShowBox .PingImgList .One{ background-position:27px top;}
+.PingShowBox .PingImgList .Two{ background-position:-180px top;}
+.PingShowBox .PingImgList .Thd{ background-position:-385px top;}
+.PingShowBox .PingImgList .For{ background-position:-590px top;}
+.PingShowBox .PingImgList span:hover{ background-image:url(../../images/ptjs/juimg_h.png);}
+
+.PingShowBox .PingImgLists span{ display:inline-block; background:url(../../images/ptjs/pingdown.png) left top no-repeat; width:170px; height:210px; cursor:pointer; margin:0 100px; position:relative;}
+.PingShowBox .PingImgLists span.cur i{ display:block; width:120px; height:120px; position:absolute; left:190px; top:15px; padding:2px; border:#333 solid 1px; background:#FFF url(../../images/ptjs/erweima.jpg) center center no-repeat;}
+.PingShowBox .PingImgLists .One{ background-position:left top;}
+.PingShowBox .PingImgLists .Two{ background-position:-372px top;}
+.PingShowBox .PingImgLists .Thd{ background-position:-744px top;}
+.PingShowBox .PingImgLists span:hover{ background-image:url(../../images/ptjs/pingdown_h.png);}
+
+/*tianjia*/
+div.clear{
+    font: 0 Arial; line-height:0;
+    height:0;
+    overflow:hidden;
+    clear:both;
+}
+.pingcase_txt{
+    width:690px;
+    padding:25px 0;
+    line-height:29px;
+    color:#a3a3a3;
+    font-size:16px;
+    text-align:center;
+    margin:0 auto;
+}
+.pingcase_items{
+    text-align:center;
+    padding-bottom:30px;
+}
+.pingcase_items a{
+    display:inline-block;
+    width:160px;
+    height:160px;
+    line-height:160px;
+    font-size:30px;
+    border:3px solid #626262;
+    border-radius:100%;
+    margin:0 100px;
+}
+.pingcase_items a:hover{
+    color:#26d7c3;
+    border-color:#26d7c3;
+}
+
+/*.case_banner{
+    height:164px;
+    background:#d38e40 url("../images/ptjs/case_banner.jpg") no-repeat top center;
+    margin-bottom:56px;
+}*/
+.case_wrap{
+    width:1030px;
+    margin:0 auto 60px auto;
+    position:relative;
+    overflow:hidden;
+}
+.case_list{
+    width:1059px;
+}
+.case_item{
+    width:324px;
+    height:288px;
+    float:left;
+    margin:0 29px 0 0;
+    _display:inline;
+}
+.case_item .photo{
+    display:block;
+    width:324px;
+    height:184px;
+    position:relative;
+    margin-bottom:12px;
+}
+.case_item .photo img{
+    display:block;
+    width:324px;
+    height:184px;
+}
+
+.case_item dt{
+    height:25px;
+    line-height:25px;
+    font-size:16px;
+}
+.case_item .name{
+    display:inline-block;
+    max-width:310px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.case_item dd{
+    color:#757474;
+    line-height:20px;
+}
+.case_video{
+    float:left;
+    width:680px;
+    height:410px;
+}
+.casevideo_intro{
+    width:280px;
+    height:388px;
+    float:right;
+    border:1px solid #cecece;
+    padding:20px 28px 0 28px;
+}
+.casevideo_intro .title{
+    height:36px;
+    line-height:36px;
+    border-bottom:2px solid #d38f3f;
+    font-size:16px;
+    font-weight:bold;
+    color:#d38f3f;
+    margin-bottom:10px;
+}
+.casevideo_intro .txt{
+    color:#868686;
+    line-height:21px;
+}
+
+.cdet_head{
+    border-bottom:1px solid #949494;
+    padding-bottom:14px;
+    text-align:center;
+    margin-bottom:60px;
+}
+.cdet_head h2{
+    height:48px;
+    line-height:48px;
+    font-size:26px;
+    font-weight:bold;
+}
+.cdet_head p{
+    line-height:26px;
+}
+.cdet_photo{
+    padding-bottom:15px;
+}
+.cdet_photo img{
+    width:335px;
+    height:335px;
+    float:left;
+    margin-right:5px;
+}
+.cdet_content p{
+    line-height:24px;
+    text-indent:0;
+}
+
+
+/*tianjia*/
+.pingcase_more{
+    display:block;
+    width:240px;
+    height:40px;
+    background:#ebeaea;
+    border-radius:20px;
+    margin:0 auto 30px auto;
+    font-size:16px;
+    color:#626262;
+    text-align:center;
+    line-height:40px;
+}
+.case_nav{
+    height:44px;
+    margin-bottom:45px;
+}
+.casenav_item{
+    float:left;
+    width:324px;
+    margin-right:29px;
+    text-align:center;
+}
+.casenav_item a{
+    display:inline-block;
+    height:42px;
+    line-height:42px;
+    padding:0 27px;
+    font-size:18px;
+    color:#d38f3f;
+    border:1px solid #d38f3f;
+}
+.casenav_item .hover{
+    color:#fff;
+    background:#d38f3f;
+}
+.case_navend{
+    margin-right:0;
+}
+.case_con{
+    display:none;
+}
+.show{
+    display:block;
+}
+
+

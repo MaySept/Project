@@ -1,0 +1,141 @@
+*{margin: 0;padding: 0;text-decoration: none ;list-style: none}
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    background: #eee;
+    font: normal 100% "微软雅黑", Arial, Helvetica, sans-serif;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.header{
+    width: 100%;
+    position: fixed;
+    height: 80px;
+    background: blue;
+    z-index: 99;
+}
+.body-right-side{
+    position: fixed;
+    right: 50px;
+    width: 45px;
+    height: 330px;
+    background: red;
+    z-index: 99;
+}
+.container{
+    width: 1136px;
+    margin: 70px auto 0;
+    height: 717px;
+    overflow: hidden;
+}
+.introduce-container h3{
+    margin-bottom: 10px;
+    color: #26d7bd;
+    font-size: 25px;
+}
+.introduce-container  p{
+    font-size: 15px;
+    color: #a1a1a1;
+    line-height: 23px;
+    text-align: left;
+}
+.index1-title{
+    margin-top: 70px ;
+    overflow: hidden;
+}
+.index1-title h1{
+    margin-top: 23px;
+    font-size: 35px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 5px;
+    font-family: "黑体";
+}
+.index1-title h5{
+    margin: 15px 0 0 0;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 300;
+}
+.index1-title h6{
+    font-weight: 300;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.threeBlockPosition{
+    margin-left: -165px;
+}
+ .threeBlockPositionBlock {
+    float: left;
+    margin-left: 165px;
+    width: 260px;
+    height: 365px;
+}
+.news-co-ul-li-a-img{
+    display: block;
+    width: 260px;
+    height: 207px;
+}
+.stage2{
+    margin-top: 115px;
+    height: 717px;
+    width: 100%;
+    background: #3dd394;
+}
+.moveBottomBTN{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: -15px;
+    left: 785px;
+    background:url("../../images/index/btn.png") 0 30px;
+    animation: moveCircle 0.4s ease-in 0s infinite alternate;
+    -webkit-animation:moveCircle 0.4s ease-in 0s infinite alternate;
+    -o-animation:moveCircle 0.4s ease-in 0s infinite alternate;
+    -moz-animation: moveCircle 0.4s ease-in 0s infinite alternate;
+}
+@-webkit-keyframes  moveCircle{
+    100%{
+        bottom: -11px;
+    }
+}
+.banner-slide .moveBottomBTN,.introduce-container .moveBottomBTN,.stage2 .moveBottomBTN{
+    bottom: 0;
+    animation: moveCircle2 0.4s ease-in 0s infinite alternate;
+    -webkit-animation:moveCircle2 0.4s ease-in 0s infinite alternate;
+    -o-animation:moveCircle2 0.4s ease-in 0s infinite alternate;
+    -moz-animation: moveCircle2 0.4s ease-in 0s infinite alternate;
+}
+@-webkit-keyframes  moveCircle2{
+    100%{
+        bottom: 4px;
+    }
+}

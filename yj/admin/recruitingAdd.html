@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>管理中心 - 招聘信息管理 </title>
+    <meta charset="utf-8">
+    <script src="js/common.js"></script>
+    <link href="styles/general.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/main.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery-3.1.0.js"></script>
+</head>
+
+<body>
+
+<h1>
+<span class="action-span" style="cursor:hand;">
+<a href="recruitingManage.html">返回列表</a>
+</span>
+    <span class="action-span1"><a href="main.html">管理中心</a>  - 招聘信息管理 - 添加招聘信息 </span>
+    <div style="clear:both"></div>
+</h1>
+
+<form method="post" action="http://nbptznjj.iego.cn/mybatisForSpring3/AddHireController.do" enctype="multipart/form-data"
+      accept-charset="utf-8" onsubmit="document.charset='utf-8';" target="myIframe" name="listForm">
+    <div class="list-div" id="listDiv">
+        <table width="100%" cellspacing="1" cellpadding="2" id="list-table">
+            <tr>
+                <th colspan="2" align="left">添加招聘信息</th>
+            </tr>
+            <tr>
+                <td align=right>标　　题：</td>
+                <td><input name="title" type="text" class='must_input' id="subject" required/></td>
+            </tr>
+            <tr>
+                <td align=right>发布日期：</td>
+                <td><input name="time" type="text" class='input' id="adddate" placeholder="示例：2001-01-01" required/></td>
+            </tr>
+            <tr>
+                <td align=right>排 序 号：</td>
+                <td><input name="sortnumber" type="text" class='input' id="orders" value="0" required/></td>
+            </tr>
+            <tr>
+                <td align=right>状　　态：</td>
+                <td>
+                    <select name="state" id="isvalid">
+                        <option value="1">显示</option>
+                        <option value="0">隐藏</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align=right>具体要求：</td>
+                <td>
+                    <textarea cols="48" rows="15" name="detial" required></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align=right>上传图片：</td>
+                <td><label>
+                    <input name="myfiles" type="file" id="upload" required/>
+                </label></td>
+            </tr>
+            <tr><td height="20"></td><td height="20"></td></tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" name="Submit" value="提交" class="button" onclick="goBack('recruitingManage.html')"/>
+                    <input type="reset" name="Submit2" value="重置" class="button"/>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</form>
+<iframe id="frame" name="myIframe" style="display: none;">接受信息</iframe>
+<div id="footer">
+    版权所有 &copy; 20010-2012 <a href="#" target="_blank">企业网站系统</a>，并保留所有权利。
+</div>
+</body>
+</html>

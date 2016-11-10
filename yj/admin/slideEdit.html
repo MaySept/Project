@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>管理中心 - 幻灯管理 </title>
+    <meta charset="utf-8">
+    <script src="js/common.js"></script>
+    <link href="styles/general.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/main.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery-3.1.0.js"></script>
+</head>
+<body>
+<h1>
+<span class="action-span" style="cursor:hand;">
+<a href="slideManage.html">返回列表</a>
+</span>
+    <span class="action-span1"><a href="main.html">管理中心</a>  - 幻灯管理 - 编辑幻灯 </span>
+    <div style="clear:both"></div>
+</h1>
+
+<form method="post" action="http://nbptznjj.iego.cn/mybatisForSpring3/UpdateHomePageController.do" enctype="multipart/form-data"
+      name="listForm" accept-charset="utf-8" onsubmit="document.charset='utf-8';" target="myIframe">
+    <div class="list-div" id="listDiv">
+        <table width="100%" cellspacing="1" cellpadding="2" id="list-table">
+            <tr>
+                <th colspan="2" align="left">编辑幻灯</th>
+            </tr>
+            <tr style="display: none">
+                <td align=right>标　　题：</td>
+                <td><input name="id" type="text" class="input" required/></td>
+            </tr>
+            <tr>
+                <td align=right>标　　题：</td>
+                <td><input name="title" type="text" class="input" id="subject"/></td>
+            </tr>
+            <tr>
+                <td align=right>图片类别：</td>
+                <td><select name="fenlei" id="fenlei">
+                    <option value="首页切换图片">首页切换图片1920*700</option>
+                </select></td>
+            </tr>
+
+            <tr>
+                <td align=right>外连地址：</td>
+                <td><input name="url" type="text" class="input" id="linkurl"/></td>
+            </tr>
+            <tr>
+                <td align=right valign=top>简　　介：</td>
+                <td>
+                    <textarea cols="48" rows="15" name="detial"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align=right>排 序 号：</td>
+                <td><input name="sortnumber" type="text" class="input" id="orders" value="0" required/></td>
+            </tr>
+
+            <tr>
+                <td align=right>上传图片：</td>
+                <td><input name="myfiles" type="file" id="upload"/></td>
+            </tr>
+
+            <tr>
+                <td height="20"></td>
+                <td height="20"></td>
+            </tr>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" name="Submit" value="提交" class="button" onclick="goBack('slideManage.html')"/>
+                    　
+                    <input type="reset" name="Submit2" value="重置" class="button"/></td>
+            </tr>
+
+        </table>
+    </div>
+</form>
+<iframe id="frame" name="myIframe" style="display: none;">接受信息</iframe>
+<div id="footer">
+    版权所有 &copy; 20010-2012 <a href="#" target="_blank">企业网站系统</a>，并保留所有权利。
+</div>
+<script>
+    postData(
+            "http://nbptznjj.iego.cn/mybatisForSpring3/QueryHomePageController.do", {id: sessionStorage.code},
+            function (data) {
+                autoValue(data);
+            }
+    )
+</script>
+</body>
+</html>

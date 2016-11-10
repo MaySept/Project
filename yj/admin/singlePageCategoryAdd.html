@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>管理中心 - 单页管理 </title>
+    <meta charset="utf-8">
+    <script src="js/common.js"></script>
+    <link href="styles/general.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/main.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery-3.1.0.js"></script>
+</head>
+<body>
+<h1>
+<span class="action-span" style="cursor:hand;">
+<a href="singlePageCategory.html">返回列表</a>
+</span>
+    <span class="action-span1"><a href="main.html">管理中心</a>  - 单页管理 - 添加单页类别 </span>
+    <div style="clear:both"></div>
+</h1>
+
+<form name="listForm">
+    <div class="list-div" id="listDiv">
+        <table width="100%" cellspacing="1" cellpadding="2" id="list-table">
+            <tr>
+                <th colspan="2" align="left">添加单页类别</th>
+            </tr>
+            <tr>
+                <td align=right>类　　别：</td>
+                <td><input name="subject" type="text" class='must_input' id="subject" value=""/></td>
+            </tr>
+
+            <tr>
+                <td align=right>排 序 号：</td>
+                <td><input name="orders" type="text" class='input' id="orders" value="0"/></td>
+            </tr>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" name="Submit" value="提交" class="button" id="btnsub"/>
+                    　
+                    <input type="reset" name="Submit2" value="重置" class="button"/></td>
+            </tr>
+        </table>
+    </div>
+</form>
+<div id="footer">
+    版权所有 &copy; 20010-2012 <a href="#" target="_blank">企业网站系统</a>，并保留所有权利。
+</div>
+<script>
+    $("#btnsub").on("click",function (e) {
+        e.preventDefault();
+        var title = $("#subject").val(),order = $("#orders").val();
+        if (!title || !order) {
+            alert("请填写完整！");
+            return;
+        }
+        var info = {title:title,sortnumber:order};
+        postData(
+                "http://nbptznjj.iego.cn/mybatisForSpring3/AddSingleTypeController.do",info,
+                function (data) {
+                    if (data.result ==0) {
+                        alert("添加成功！");
+                        location.href = "singlePageCategory.html";
+                    }else{
+                        alert("服务器异常，请重试！");
+                    }
+                }
+        )
+    })
+</script>
+</body>
+</html>

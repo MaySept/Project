@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>管理中心 - 新闻资讯管理 </title>
+    <meta charset="UTF-8">
+    <script src="js/common.js"></script>
+    <link href="styles/general.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/main.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery-3.1.0.js"></script>
+</head>
+<body>
+<h1>
+<span class="action-span" style="cursor:hand;">
+<a href="informationCategoryAdd.html">添加新闻资讯类别</a>
+</span>
+    <span class="action-span1"><a href="main.html">管理中心</a>  - 新闻资讯管理 </span>
+    <div style="clear:both"></div>
+</h1>
+<form method="post" action="?act=del" name="listForm">
+    <div class="list-div" id="listDiv">
+        <table width="100%" cellspacing="1" cellpadding="2" id="list-table">
+            <tr>
+                <th width="58" align="center">
+                    <nobr>选择</nobr>
+                </th>
+                <th width="372">类别</th>
+                <th width="329">排 序 号</th>
+            </tr>
+
+            <tr id="none">
+                <td colspan="4" height="30" style=" padding:10px 0px 10px 30px; color:#660000">暂时没有记录</td>
+            </tr>
+        </table>
+
+    </div>
+</form>
+<div id="footer">
+    版权所有 &copy; 20010-2012 <a href="#" target="_blank">企业网站系统</a>，并保留所有权利。
+</div>
+<script>
+    requestData(
+            "http://nbptznjj.iego.cn/mybatisForSpring3/QueryArticleController.do",
+            function (data) {
+                if (data.length !=0) {
+                    for(var i=0,j=data.length;i<j;i++) {
+                        var info = data[i];
+                        addList("#",info.id,info.title,info.sortnumber);
+                    }
+                    addGetAllListener("http://nbptznjj.iego.cn/mybatisForSpring3/DeleteArticleController.do", "id", 1);
+                }
+            }
+    )
+</script>
+</body>
+</html>

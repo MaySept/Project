@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/admin_index.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/articleManage.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/articleManageAdd.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/articleManageEdit.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/caseCategory.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/caseCategoryAdd.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/caseCategoryEdit.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/caseManage.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/caseManageAdd.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/caseManageEdit.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/communityManage.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/communityManageAdd.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/districtManage.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/districtManageAdd.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/editFranchiseAgreement.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/franchiseAgreement.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/franchiseAgreementAdd.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/franchiseManage.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/index.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/informationCategory.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/informationCategoryAdd.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/common.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/link.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/linkAdd.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/main.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/menu.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/partnerAdd.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/partnerCategory.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/partnerCategoryAdd.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/partnerEdit.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/partnerManage.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/personAdd.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/personEdit.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/personManage.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/power.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/powerAdd.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/powerEdit.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/recruitingAdd.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/recruitingEdit.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/recruitingManage.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/singlePageCategory.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/singlePageCategoryAdd.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/singlePageCategoryEdit.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/singlePageCategoryManage.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/singlePageCategoryManageAdd.htm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/singlePageCategoryManageEdit.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/slideAdd.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/slideEdit.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/slideManage.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/top.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/videoManage.html" charset="UTF-8" />
+  </component>
+</project>

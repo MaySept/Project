@@ -1,0 +1,52 @@
+*{margin: 0;padding: 0}
+body{    font: normal 100% "微软雅黑", Arial, Helvetica, sans-serif;
+    color: #232323;}
+.Header .nav-in li:nth-child(5) a{color: #e87e30;  border-bottom-color: #e87e30;}
+#huobanTop{width: 100%;height: 165px;margin-top: 80px;  }
+#list{width: 1136px;height: 50px;margin: 0 auto;margin-top: 30px;}
+ .HeZuoFen {
+    height: 50px;
+    width: 1082px;
+    margin: 0 auto;
+    padding: 0 27px;
+    text-align: center;
+}
+.HeZuoFen a {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    border: #3fb2d3 solid 1px;
+    color: #3fb2d3;
+    line-height: 50px;
+    margin: 0 26px;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.HeZuoFen a:hover {
+    background:#3fb2d3;
+    color: #ffffff;
+}
+
+#list .aaa{
+    background-color: #3fb2d3 ;
+    color: #ffffff;
+
+}
+
+
+.box{width:1136px;margin: 30px  auto 50px;overflow: hidden}
+.more{width:1136px;height: 100px;margin: 30px auto;}
+.more .data{width:232px;height: 41px;   border-radius: 15px;text-decoration: none;margin-left: 480px;
+    padding: 10px 80px;
+    background: #ebeaea;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 2px;cursor: pointer}
+.sonDiv{display: block;   width: 225px;height: 140px;float: left;overflow: hidden;cursor: pointer}
+.image{width: 225px;height: 140px}
+.image:hover{transform: scale(1.2,1.2);transition: all 1s;}
+

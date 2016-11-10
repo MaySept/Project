@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "微软雅黑",Arial,Helvetica,sans-serif;
+}
+.case_banner{
+    height: 164px;
+    background: #d38e40 url("../../images/yxal/images/case_banner.jpg") no-repeat top center;
+    margin-bottom: 56px;
+}
+.case_wrap{
+    width: 1030px;
+    margin: 0 auto 60px auto;
+    position: relative;
+    overflow: hidden;
+}
+.cdet_head{
+    /*font-family: "微软雅黑",Arial,Helvetica,sans-serif;*/
+    border-bottom: 1px solid #949494;
+    padding-bottom: 14px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.cdet_head h2{
+    height: 48px;
+    line-height: 48px;
+    font-size: 26px;
+    font-weight: bold;
+}
+.cdet_head p{
+    line-height: 26px;
+}
+.cdet_content p{
+    line-height: 24px;
+    text-indent: 0;
+   margin:10px 0;
+}
+.cdet_content h3{
+    font-size:18px;
+    margin-top: 45px;
+}
+.cdet_content .cdet_content_img{
+    text-align: center;
+    margin-top:50px;
+}
+.Header .nav-in li:nth-child(4) a {
+    color: #e87e30;
+    border-bottom-color: #e87e30;
+}
+

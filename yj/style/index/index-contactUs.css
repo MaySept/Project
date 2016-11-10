@@ -1,0 +1,16 @@
+.contactUs-swiper{
+    background: #f8f8f8;
+    position: relative;
+}
+.linklist{
+    font-size: 12px;
+    position: absolute;
+    bottom: 150px;
+    left: 0;
+    right: 0;
+}
+.linklist a{
+    color: #a3a3a3 !important;
+    display: inline-block;
+    margin: 0 3px;
+}

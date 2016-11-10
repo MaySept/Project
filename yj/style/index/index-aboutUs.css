@@ -1,0 +1,50 @@
+.aboutUs-container{
+    background: #e87e30;
+}
+.aboutUs-title{
+    margin: 90px 0 45px ;
+    color: #fff;
+}
+.aboutUs-co-ul-li-a-img{
+    display: block;
+}
+.aboutUs-co-ul-li-a-img i{
+    display: block;
+    width: 148px;
+    height: 148px;
+    margin: 0 auto;
+}
+.aboutUs-co-ul-li-a-img h3{
+    font-size: 24px;
+    color: #fff;
+     margin-top: 30px;
+}
+.aboutUs-co-ul-li-a-img p{
+    font-size: 16px;
+    text-align: left;
+    line-height: 30px;
+    margin-top: 20px;
+    color: #fff;
+}
+.aboutUs-co-ul-li-a-img  .hoverBefore1{
+    background: url("../../images/index/tuanico.png");
+}
+.aboutUs-co-ul-li-a-img:hover .hoverBefore1{
+    background: url("../../images/index/tuanico_h.png");
+}
+.aboutUs-co-ul-li-a-img  .hoverBefore2{
+    background: url("../../images/index/zhaoico.png");
+}
+.aboutUs-co-ul-li-a-img:hover .hoverBefore2{
+    background: url("../../images/index/zhaoico_h.png");
+}
+.aboutUs-co-ul-li-a-img  .hoverBefore3{
+    background: url("../../images/index/lianico.png");
+}
+.aboutUs-co-ul-li-a-img:hover .hoverBefore3{
+    background: url("../../images/index/lianico_h.png");
+}
+/*/*/
+/*display: block;*/
+/*width: 260px;*/
+/*height: 207px;*/

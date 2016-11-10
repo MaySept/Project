@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>忆街区官方网站</title>
+    <link rel="stylesheet" type="text/css" href="style/jmhz/jmhz.css">
+    <link rel="stylesheet" type="text/css" href="lib/style/lib.css">
+    <script src="script/jquery-3.1.0.js"></script>
+</head>
+<body>
+<script src="lib/script/lib.js"></script>
+<div class="join"></div>
+<div class="main">
+    <div class="tab">
+        <span class="on" index="0">物业加盟</span><span index="1">商家加盟</span>
+    </div>
+    <!--选项卡1-->
+    <div class="content on">
+        <p class="p1"> 通过多种智能终端管理系统，对终端进行用户的数据采集营造大数据中心，收集、整理、分析用户数据，深层次了解用户需求，协助提高用户满意。 </p>
+        <span>加盟优势</span>
+        <p class="p2">亿街区为社区物业团队提供精细化、前瞻性、人性化的社区管理服务平台，通过整合用户数据、沟通统筹管理的方式，<br/>协助物业项目提升自身服务质量，提高用户满意度。</p>
+        <dl>
+            <dd class="block1"></dd>
+            <dd class="block2"></dd>
+            <dd class="block3"></dd>
+            <dd class="block4"></dd>
+            <dd class="block5"></dd>
+            <dd class="block6"></dd>
+        </dl>
+        <span>加盟流程</span>
+        <p class="p2">亿街区物联，与合作伙伴打造开放共赢的智能硬件生态体系</p>
+        <img style="margin:0 auto;" src="images/jmhz/wuyeliucheng.png" width="1130" height="312">
+        <a href="#" class="ljjm"><img src="images/jmhz/jiameng.png"></a>
+        <span>招商联系方式</span>
+        <div class="contact">
+            <div class="ContactItem">
+                <h3>王濛</h3>
+                <p>手机：13466667557<br>
+                    邮箱： wangmeng1@sinooceanland.com </p><br>
+            </div>
+            <div class="ContactItem">
+                <h3>任维</h3>
+                <p>手机：13911275766<br>
+                    邮箱： renwei1@sinooceanland.com </p>
+            </div>
+        </div>
+    </div>
+    <!--选项卡2-->
+    <div class="content">
+        <p class="p1">以丰富的用户资源为保障，免费入驻平台。线上秒杀、团购、首单特价等多种玩法与线下社区地推活动相结合，使商品和服务直达目标消费者。</p>
+        <span>加盟优势</span>
+        <p class="p2">亿街区覆盖住宅、写字楼、社区配套商业、综合商业设施多种业态，拥有超过12万的高净价值用户资源，<br/>为商家提供运营架构顺畅而完整的闭环，以及获取盈利与支持的便利性。</p>
+        <ul>
+            <li class="li1"></li>
+            <li class="li2"></li>
+            <li class="li3"></li>
+            <li class="li4"></li>
+        </ul>
+        <span>加盟流程</span>
+        <p class="p2">亿街区物联，与合作伙伴打造开放共赢的智能硬件生态体系</p>
+        <img style="margin:0 auto;" src="images/jmhz/liuchengimg.png" width="1130" height="312">
+        <span>招商联系方式</span>
+        <div class="contact">
+            <div class="ContactItem">
+                <h3>王   璐</h3>
+                <p>手机：18618205595<br>
+                    邮箱： wanglu6@sinooceanland.com </p><br>
+            </div>
+            <div class="ContactItem">
+                <h3>曲   亮</h3>
+                <p>手机：13811794912<br>
+                    邮箱： quliang@sinooceanland.com </p>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<script>
+    $(".tab>span").on("click",function () {
+        $(".tab .on").removeClass("on"),$(this).addClass("on");
+        $(".content.on").removeClass("on"), $($(".content")[$(this).attr("index")]).addClass("on");
+    })
+</script>
+
+</body>
+</html>

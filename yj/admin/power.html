@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>管理中心 - 管理员设置 </title>
+    <meta charset="utf-8">
+    <script src="js/common.js"></script>
+    <link href="styles/general.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/main.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery-3.1.0.js"></script>
+<body>
+<h1>
+<span class="action-span">
+<a href="powerAdd.html">添加管理员</a>
+</span>
+    <span class="action-span1"><a href="main.html">管理中心</a>  - 管理员设置 </span>
+    <div style="clear:both"></div>
+</h1>
+<div class="form-div">
+    <form name="searchForm">
+        <input type="hidden" name="acts" value="search"/>
+        <input type="hidden" name="pagesizes" value=""/>
+        <img src="images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH"/>
+        帐号
+        <input type="text" name="keyword" value="" size="15"/>
+        <!--<input type="submit" value=" 搜索 " class="button"/>-->
+    </form>
+</div>
+<form name="listForm">
+    <div class="list-div" id="listDiv">
+        <table width="100%" cellspacing="1" cellpadding="2" id="list-table">
+            <tr>
+                <th width="54" align="center">
+                    <nobr>选择</nobr>
+                </th>
+                <th width="216">账号</th>
+                <th width="253">等级</th>
+                <th width="222">最后登陆时间</th>
+                <th width="169">最后登陆IP</th>
+            </tr>
+
+        </table>
+
+    </div>
+</form>
+<div id="footer">
+    版权所有 &copy; 20010-2012 <a href="#" target="_blank">企业网站系统</a>，并保留所有权利。
+</div>
+
+<script>
+    requestData(
+            "http://nbptznjj.iego.cn/mybatisForSpring3/QueryUserController.do",
+            function (data) {
+                if (data.length != 0) {
+                    for(var i=0,j=data.length;i<j;i++) {
+                        var info = data[i];
+                        addList("powerEdit.html",info["username"],info["username"],translateCode(info["power"]),info["lasttime"],info["lastip"]);
+                    }
+                    addGetAllListener("http://nbptznjj.iego.cn/mybatisForSpring3/DeleteUserController.do","username",3);
+                    addSearchListener();
+                }
+            }
+    )
+</script>
+
+</body>
+</html>

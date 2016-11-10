@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>管理中心 - 小区管理 </title>
+    <meta charset="UTF-8">
+    <script src="js/common.js"></script>
+    <link href="styles/general.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/main.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery-3.1.0.js"></script>
+</head>
+<body>
+<h1>
+<span class="action-span" style="cursor:hand;">
+<a href="communityManageAdd.html">添加小区</a>
+</span>
+    <span class="action-span1"><a href="main.html">管理中心</a>  - 小区管理 </span>
+    <div style="clear:both"></div>
+</h1>
+<div class="form-div">
+    <form action="?acts=search" name="searchForm" method="get">
+        <input type="hidden" name="acts" value="search"/>
+        <input type="hidden" name="pid" value=""/>
+        <input type="hidden" name="pagesizes" value=""/>
+        <img src="images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH"/>
+        标题
+        <input type="text" name="keyword" value="" size="15"/>
+
+        <!--<input type="submit" value=" 搜索 " class="button"/>-->
+    </form>
+</div>
+<form method="post" action="?act=del" name="listForm">
+    <input type="hidden" name="pid" value=""/>
+    <div class="list-div" id="listDiv">
+        <table width="100%" cellspacing="1" cellpadding="2" id="list-table">
+            <tr>
+                <th width="63" align="center">
+                    <nobr>选择</nobr>
+                </th>
+                <th width="249">标题&nbsp;&nbsp;(&nbsp;&nbsp;二维码图片建议宽280px&nbsp;&nbsp;高280px&nbsp;&nbsp;)</th>
+                <th width="165">所属类别</th>
+                <th width="200">所属城市</th>
+                <th width="64">排 序 号</th>
+                <th width="63">点击数</th>
+                <th width="44">推荐</th>
+                <th width="56">状态</th>
+            </tr>
+
+            <tr id="none">
+                <td colspan="8" height="30" style=" padding:10px 0px 10px 30px; color:#660000">暂时没有记录</td>
+            </tr>
+        </table>
+
+    </div>
+</form>
+<div id="footer">
+    版权所有 &copy; 20010-2012 <a href="#" target="_blank">企业网站系统</a>，并保留所有权利。
+</div>
+<script>
+    requestData(
+            "http://nbptznjj.iego.cn/mybatisForSpring3/QueryAreaDetialController.do",
+            function (data) {
+                if (data.length !=0) {
+                    for(var i=0,j=data.length;i<j;i++) {
+                        var info = data[i];
+                        addList("communityEdit.html",info.id,info.title,info.type,info.detial,info.sortnumber,info.click,info.recommand==1?"是":"否",info.state==1?"推荐":"隐藏");
+                    }
+                    addGetAllListener("http://nbptznjj.iego.cn/mybatisForSpring3/DeleteAreaDetialController.do", "id", 6);
+                    addSearchListener();
+                }
+            }
+    )
+</script>
+</body>
+</html>

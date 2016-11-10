@@ -1,0 +1,45 @@
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; FONT: 12px "sans-serif", "Arial", "Verdana"; COLOR: #192e32; PADDING-TOP: 0px
+}
+P {
+	FONT: 12px "sans-serif", "Arial", "Verdana"
+}
+TD {
+	FONT: 12px "sans-serif", "Arial", "Verdana"
+}
+DIV {
+	FONT: 12px "sans-serif", "Arial", "Verdana"
+}
+TH {
+	FONT: bold 12px "sans-serif", "Arial", "Verdana"
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+INPUT {
+	FONT: 12px "courier new"
+}
+TEXTAREA {
+	FONT: 12px "courier new"
+}
+SELECT {
+	FONT: 12px "courier new"
+}
+A:visited {
+	COLOR: #335b64; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #335b64; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #eb8a3d; TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #eb8a3d; TEXT-DECORATION: underline
+}
+.clear {
+	CLEAR: both; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; FONT-SIZE: 0px; FLOAT: none; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.nowrap {
+	WHITE-SPACE: nowrap
+}

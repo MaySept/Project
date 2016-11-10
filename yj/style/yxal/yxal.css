@@ -1,0 +1,150 @@
+body {
+	font: normal 100% "΢���ź�", Arial, Helvetica, sans-serif;
+	color: #232323;
+	background:#FFF;
+	font-size:13px;
+	margin:0;
+	padding:0;
+	-webkit-text-size-adjust: none;
+
+}
+a {
+	text-decoration: none;
+	color: #666666;
+	border:none;
+}
+.clear {
+	clear: both;
+}
+h1, h2, h3, h4,form{
+	margin: 0;
+	padding: 0;
+}
+ul, li, dl, dt, dd {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+img {
+	border:none;
+}
+
+/*caseҳ��*/
+.case_body{
+	width:100%;
+	margin:0 auto;
+	height:1290px;
+	overflow: hidden;
+	background: #fff;
+	margin-bottom:60px;
+}
+.case_top{
+	margin:0 auto;
+	width:100%;
+	height:81px;
+}
+.case_inner{
+	margin:0 auto;
+	width:100%;
+	height:164px;
+	margin-bottom:56px;
+	background:#d38e40 url("../../images/yxal/case_banner.jpg") no-repeat center;
+}
+.case_middle{
+	width: 100%;
+	height:988px;
+	margin: 0 auto;
+	overflow:hidden;
+}
+.case_middle_inner{
+	width: 1030px;
+	height:988px;
+	margin: 0 auto;
+	overflow:hidden;
+}
+.case_middle_inner_Image{
+	width: 1059px;
+	height:576px;
+	overflow:hidden;
+}
+.cmiI_item{
+	width: 324px;
+	height:288px;
+	float: left;
+	margin:0;
+	margin-right:29px;
+}
+.cmiI_item .photo{
+	display:block;
+	width:324px;
+	height:184px;
+	position: relative;
+}
+.cmiI_item .photo img{
+	z-index: 0;
+	width:324px;
+	height:184px;
+}
+.cmiI_item .photo span{
+	display:inline-block;
+	height:25px;
+	line-height:25px;
+	padding:0 10px 0 25px;
+	background:url("../../images/yxal/case_city.png") no-repeat left center;
+	color:#fff;
+	position:absolute;
+	right:0;
+	top:5px;
+}
+.cmiI_item dl{
+	display: block;
+	margin:0;
+}
+.cmiI_item dl a{
+	/*display: block;*/
+	height:25px;
+	line-height:25px;
+	font-size:16px;
+}
+.cmiI_item dl b{
+	color:#757474;
+	line-height:20px;
+}
+.cmiI_item .name{
+	margin: 12px 0;
+	padding: 0;
+	display:inline-block;
+	max-width:310px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.case_middle_inner_video{
+	float: left;
+	margin: 0;
+}
+.case_middle_inner_intro{
+	width:280px;
+	height:388px;
+	float:right;
+	border:1px solid #cecece;
+	padding:20px 28px 0 28px;
+}
+.case_middle_inner_intro .cmii_title{
+	height:36px;
+	line-height:36px;
+	border-bottom:2px solid #d38f3f;
+	font-size:16px;
+	font-weight:bold;
+	color:#d38f3f;
+	margin-bottom:10px;
+}
+.case_middle_inner_intro .cmii_txt{
+	color:#868686;
+	line-height:21px;
+}
+.Header .nav-in li:nth-child(4) a {
+	color: #e87e30;
+	border-bottom-color: #e87e30;
+}
+

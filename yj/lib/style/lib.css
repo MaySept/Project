@@ -1,0 +1,57 @@
+body { font: normal 100% "微软雅黑", Arial, Helvetica, sans-serif; color: #232323; background:#FFF; font-size:13px; margin:0; padding:0; -webkit-text-size-adjust: none }
+a { text-decoration: none; color: #666666; border:none; }
+h1, h2, h3, h4,form,p{ margin: 0; padding: 0; }
+ul, li, dl, dt, dd { margin:0; padding:0; list-style:none; }
+img { border:none; }
+div.clear{font: 0px Arial;  line-height: 0;  height: 0;  overflow: hidden;  clear: both;}
+
+.Header{ position:fixed;top:0;left:0;z-index:999;width:100%; height:80px; background:#FFF; border-bottom:solid #f8f8f8 1px; box-shadow: 0 0 5px #DDD; overflow: hidden}
+.nav{  position: absolute;  top: 0;left:0;right:0;  width: 1136px;  height: 80px;  margin:auto;  }
+.logo{  display: block;  float: left;  margin: 8px 0;  }
+.nav-in{  float: right;  margin-top: 40px;  }
+.nav-in li{  float: left;  padding: 0 20px;  }
+.nav-in li a{  color: #636363;  font-size: 16px;  font-weight: 400;  border-bottom: solid 2px #FFF;  padding-bottom: 3px;  }
+.nav-in li a:hover , .nav-in li a.on{  color: #e87e30;  border-bottom-color: #e87e30;  }
+
+.RighFix{ position:fixed; top:50%; right:35px; margin-top:-105px;}
+.RighFix .RighFixItem{ position:relative; margin-bottom:10px;}
+.RighFix .RighFixItem span{ display:block; width:45px; height:45px; background:#e4e2e2 url(../images/righ_ico_tel.png) center center no-repeat;}
+.RighFix .RighFixItem .ico_app{ background-image:url(../images/righ_ico_app.png);}
+.RighFix .RighFixItem .ico_wei{ background-image:url(../images/righ_ico_wei.png);}
+.RighFix .RighFixItem .ico_sian{ background-image:url(../images/righ_ico_sina.png);}
+.RighFix .SecDivBox{ position:absolute; left:-255px; top:0px; background:url(../images/righ_jiao.png) right 10px no-repeat; width:240px; height:auto; text-align:right; padding-right:10px; display:none;}
+.RighFix .SecDivBox label{ background:#e4e2e2; padding:10px; float:right;}
+.RighFix .SecDivBox .tel_txt{ font-size:20px; color:#FFF; font-weight:bold;}
+.RighFixItem:hover .SecDivBox{ display:block;}
+.RighFix .RighFixItem i{ color:#FFF; display: block; width: 45px; height: 45px; line-height:45px; font-size:18px; font-weight:bold; text-align:center; background: #e4e2e2; font-style:normal; cursor:pointer;}
+
+.JiaMengNow {  position: fixed;  top: 50%;  right: 5px;  margin-top: 220px;  }
+
+.Inpag.Bottom{ text-align:left;}
+.Inpag.Bottom .BottomBox{ width:1136px; margin:0 auto; padding-bottom:0px; padding-top:10px;}
+.Inpag.Bottom .BottomBody{ float:left;}
+.Inpag.Bottom .Copy{ line-height:30px;}
+.Inpag.Bottom .BottomWei{ float:right; padding-top:10px;}
+.Inpag.Bottom .BottomWei h3{ padding-left:15px; padding-top:130px;}
+
+.Inpag.Bottom .ConImg{ margin-bottom:10px; padding-top:20px; position:relative;}
+.Inpag.Bottom .ConImg a{ position:absolute; left:93px; top:20px; font-size:15px; line-height:17px; text-decoration:none; background:#26d7bd; color:#FFF; padding:0px 10px;}
+.Inpag.Bottom .ConImg a:hover{ color:#FFF;}
+
+.Bottom{ background:#f8f8f8; text-align:center; padding-bottom:20px;}
+.Bottom .ConImg{ margin-bottom:20px; padding-top:60px;}
+.Bottom h3{ color:#26d7bd; font-size:17px; line-height:35px;}
+.Bottom .Copy{ line-height:30px; color:#a3a3a3; font-size:15px;}
+.Bottom .Copy span{ color:#26d7bd;}
+
+.Bottom .BottomWei{ padding-top:40px;}
+.Bottom .WeiArea{ padding-top:5px; padding-bottom:15px;}
+.Bottom .WeiArea a{ display:inline-block; width:59px; height:59px; position:relative; margin:0 15px;}
+.Bottom .WeiArea a.sian{ background:url(../images/sian.png);}
+.Bottom .WeiArea a.sian:hover{ background-image:url(../images/sian_h.png);}
+.Bottom .WeiArea a.wei{ background:url(../images/wei.png);}
+.Bottom .WeiArea a.wei:hover{ background-image:url(../images/wei_h.png);}
+.Bottom .WeiArea a.app{ background:url(../images/app.png);}
+.Bottom .WeiArea a.app:hover{ background-image:url(../images/app_h.png);}
+.Bottom .WeiArea a img{ position:absolute; width:120px; height:120px; border:solid #666 1px; left:-30px; top:-130px; display:none; max-width:none;}
+.Bottom .WeiArea a:hover img{ display:block;}

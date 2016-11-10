@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>管理中心 - 在线加盟管理 </title>
+    <meta charset="UTF-8">
+    <script src="js/common.js"></script>
+    <link href="styles/general.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/main.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery-3.1.0.js"></script>
+</head>
+<body>
+<h1>
+<span class="action-span" style="cursor:hand;">
+
+</span>
+    <span class="action-span1"><a href="main.html">管理中心</a>  - 在线加盟管理 </span>
+    <div style="clear:both"></div>
+</h1>
+<div class="form-div">
+    <form action="?acts=search" name="searchForm" method="get">
+        <input type="hidden" name="acts" value="search"/>
+        <input type="hidden" name="pagesizes" value=""/>
+        <img src="images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH"/>
+        标题
+        <input type="text" name="keyword" value="" size="15"/>
+        <!--<input type="submit" value=" 搜索 " class="button"/>-->
+    </form>
+</div>
+<form method="post" action="?act=del" name="listForm">
+    <div class="list-div" id="listDiv">
+        <table width="100%" cellspacing="1" cellpadding="2" id="list-table">
+            <tr>
+                <th width="73" align="center">
+                    <nobr>选择</nobr>
+                </th>
+                <th width="329">姓名</th>
+                <th width="225">电话</th>
+                <th width="273">EMAIL</th>
+                <th width="278">申请时间</th>
+            </tr>
+
+            <tr id="none">
+                <td colspan="5" height="30" style=" padding:10px 0px 10px 30px; color:#660000">暂时没有记录</td>
+            </tr>
+        </table>
+    </div>
+</form>
+<div id="footer">
+    版权所有 &copy; 20010-2<a href="#" target="_blank">企业网站系统</a>，并保留所有权利。
+</div>
+<script>
+    requestData(
+            "http://nbptznjj.iego.cn/mybatisForSpring3/QueryLeagueController.do",
+            function (data) {
+                if (data.length !=0) {
+                    for (var i=0,j=data.length;i<j;i++) {
+                        var info =data[i];
+                        addList("franchiseView.html",info.id,info.name,info.phone,info.email,info.time);
+                    }
+                    addGetAllListener("http://nbptznjj.iego.cn/mybatisForSpring3/deleteLeagueController.do", "id", 3);
+                    addSearchListener();
+                }
+            }
+    )
+</script>
+</body>
+</html>

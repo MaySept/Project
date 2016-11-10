@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>管理中心 - 加盟协议设置 </title>
+    <meta charset="UTF-8">
+    <script src="js/common.js"></script>
+    <link href="styles/general.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/main.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery-3.1.0.js"></script>
+</head>
+<body>
+<h1>
+<span class="action-span" style="cursor:hand;">
+    <a href="franchiseAgreement.html">返回列表</a>
+</span>
+    <span class="action-span1"><a href="main.html">管理中心</a>  - 加盟协议设置 - 编辑加盟协议 </span>
+    <div style="clear:both"></div>
+</h1>
+<form name="listForm" enctype="multipart/form-data" id="listForm">
+    <input type="hidden" id="id" name="id" value="1"/>
+    <input type="hidden" id="page" name="page" value=""/>
+    <input type="hidden" id="keyword" name="keyword" value=""/>
+    <input type="hidden" id="acts" name="acts" value=""/>
+    <div class="list-div" id="div">
+        <table width="100%" cellspacing="1" cellpadding="2" id="list-table">
+            <tr>
+                <th colspan="2" align="left">编辑加盟协议</th>
+            </tr>
+            <tr>
+                <td width="21%" align=right>纸质版合作协议名称：</td>
+                <td width="79%"><input name="jia1" type="text" class='must_input' id="jia1" value=""/></td>
+            </tr>
+            <tr>
+                <td align=right>纸质版合作协议文件：</td>
+                <td>
+                    <label>
+                        <input name="upload" type="file" id="upload"/>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td align=right>物业费代收协议名称：</td>
+                <td><input name="jia3" type="text" class='must_input' id="jia3" value=""/></td>
+            </tr>
+            <tr>
+                <td align=right>物业费代收协议文件：</td>
+                <td>
+                    <label>
+                        <input name="uploads" type="file" id="uploads"/>
+                    </label>
+                </td>
+            </tr>
+            <tr style="display:none;">
+                <td width="21%" align=right>页面名称：</td>
+                <td width="79%"><input name="pagename" type="text" class='must_input' id="pagename" value=""/></td>
+            </tr>
+            <tr style="display:none;">
+                <td align=right>页面地址：</td>
+                <td><input name="pageurl" type="text" class='must_input' id="pageurl" value=""/></td>
+            </tr>
+            <tr style="display:none;">
+                <td align=right valign=top>页面标题：</td>
+                <td><textarea name="titles" cols="60" rows="5" id="titles"></textarea></td>
+            </tr>
+            <tr style="display:none;">
+                <td align=right valign=top>页面关键字：</td>
+                <td><textarea name="keywords" cols="60" rows="5" id="keywords"></textarea></td>
+            </tr>
+            <tr style="display:none;">
+                <td align=right valign=top>页面描述：</td>
+                <td><textarea name="descs" cols="60" rows="5" id="descs"></textarea></td>
+            </tr>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td><input name="Submit3" type="submit" class="button" value="提交" />
+                    　
+                    <input name="Submit22" type="reset" class="button" value="重置"/></td>
+            </tr>
+        </table>
+    </div>
+</form>
+<div id="footer">
+    版权所有 &copy; 20010-2012 <a href="#" target="_blank">企业网站系统</a>，并保留所有权利。
+</div>
+</body>
+</html>

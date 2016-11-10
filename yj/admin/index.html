@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>建站|网站建设|网站优化|网站推广|网络工作室|企业网站系统！</title>
+    <meta charset="UTF-8">
+    <link href="styles/general.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/main.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery-3.1.0.js"></script>
+    <style>
+        #checkCode {
+            position: absolute;
+            margin-left: 20px;
+            width: 50px;
+            height: 19px;
+            background-color: #fff;
+            line-height: 19px;
+            text-align: center;
+            letter-spacing: 2px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body style="background: #1F778C">
+<form name='theForm'>
+    <table cellspacing="0" cellpadding="0" style="margin-top: 100px" align="center">
+        <tr>
+            <td><img src="images/login.png" border="0" alt="ECSHOP"/></td>
+            <td style="padding-left: 50px">
+                <table>
+                    <tr>
+                        <td>管理员姓名：</td>
+                        <td><input type="text" name="username" id="username"/></td>
+                    </tr>
+                    <tr>
+                        <td>管理员密码：</td>
+                        <td><input type="password" name="password" id="password"/></td>
+                    </tr>
+                    <tr>
+                        <td>验证码：</td>
+                        <td>
+                            <input type="text" name="verify" id="verify" size="10">
+                            <span id="checkCode">1234</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><input type="submit" value="进入管理中心" class="button"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="right">&raquo; <a href="../" style="color:white">返回首页</a> &raquo; </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <input type="hidden" value="CheckLogin" name="method">
+</form>
+
+<script src="js/index.js"></script>
+</body> 

@@ -1,0 +1,30 @@
+.about{  width: 100%;  height: 165px;  margin-top: 80px;  background: url("../../images/gywm/guanbg.png") no-repeat center -20px;  }
+.main{  width: 1136px;  margin: 15px auto 50px;  }
+.team{text-align: center;}
+.main .tit{  display: inline-block;  line-height: 45px;  font-size: 30px;  color: #f1959e;  padding: 2px 30px;  margin: 40px auto 0;  border: solid #f1959e 1px;  letter-spacing: 1px;  }
+.main p{  color: #a3a3a3;  line-height: 30px;  font-size: 16px;  padding-top: 20px;  padding-bottom: 20px;  overflow: auto;  }
+
+.Header .nav-in li:nth-child(8) a{color: #e87e30;  border-bottom-color: #e87e30;}
+
+.TuanList{ padding-top:30px; padding-left:80px; padding-right:80px;width:976px;height:312px;}
+.TuanLiItem{ float:left; width:100%; border-bottom:#CCC solid 1px; margin-bottom:25px; padding-bottom:25px; overflow:auto;}
+.TuanLiItem.righ{ text-align:right;}
+
+.TuanImg{ overflow:hidden; float:left; margin-right:20px;}
+.TuanImg img{ width:100px; height:100px; -moz-border-radius: 50px; -webkit-border-radius: 50px; border-radius:50px;  }
+.TuanDiel{ text-align:center; line-height:30px; float:left; text-align:left; color:#a3a3a3;}
+.TuanDiel h4{ font-size:30px; margin:30px auto; font-weight:400; color:#333; display:none;}
+.TuanDiel span{ padding:2px 20px; padding:0; margin-right:10px; border:solid #707070 0px; font-size:25px; float:left;}
+.TuanDiel label{ display:block; font-size:12px; margin-top:0px; line-height:20px; padding-top:10px; color:#a3a3a3;}
+.TuanDiel .ShortDes{ padding:5px 10px; padding:15px 0 0 0; text-align:left; line-height:20px; float:left; }
+
+.TuanLiItem.righ .TuanImg{ float:right; margin-right:0; margin-left:20px;}
+.TuanLiItem.righ .TuanDiel{ float:right; text-align:right;}
+.TuanLiItem.righ .TuanDiel span{margin-right:0px; margin-left:10px; float:right;}
+.TuanLiItem.righ .TuanDiel .ShortDes{  text-align:right;}
+
+.pin{text-align: center;}
+.pin .job{  padding: 10px 95px 20px; border-bottom: solid #dfddde 1px;  }
+.job a{  display: inline-block;  margin: 0 28px 28px 0;  }
+.contact{text-align: center;}
+.contact .ways{  color: #a3a3a3;  line-height: 30px;  font-size: 16px;  padding-top: 20px;  padding-bottom: 20px;  overflow: auto;  text-align: center;  }
