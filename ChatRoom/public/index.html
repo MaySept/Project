@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        canvas{background-color: #66bbee;}
+    </style>
+
+    <style>
+        #ta-chat-out {
+            width: 400px;
+            height: 200px;
+        }
+
+        #form-chat-input input[name='chat-input'] {
+            width: 300px;
+        }
+
+        #form-chat-input input[name='name'] {
+            width: 300px;
+        }
+    </style>
+
+    <script src="socket.io.js"></script>
+</head>
+<body>
+<div>
+    <textarea id="ta-chat-out"></textarea>
+</div>
+<div>
+    <form id="form-chat-input">
+        <div>
+            <label>
+                <span>用户</span>
+                <input type="text" required="required" name="name">
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>信息</span>
+                <input type="text" name="chat-input" required="required">
+            </label>
+            <input type="submit" value="发送">
+        </div>
+    </form>
+</div>
+<canvas id="myCanvas" width="500" height="500"></canvas>
+<input type="button" value="保存绘图" id="btn"/>
+<input type="button" value="重绘" id="btn2"/>
+<script src="main.js"></script>
+</body>
+</html>
