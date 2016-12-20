@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>亿街区官方网站</title>
+    <link rel="stylesheet" type="text/css" href="lib/style/lib.css">
+    <link rel="stylesheet" type="text/css" href="style/jmhz/jmhz.css">
+    <script src="lib/script/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<script src="lib/script/lib.js"></script>
+<div class="Banaer"></div>
+<div class="JiaMengForm">
+    <div class="JiaMengBasic">
+        <h1>加盟信息</h1>
+        <div class="JiaMengInfo">
+            <div class="JiaMengLine">
+                <span style=" float:none;">物业服务功能</span>
+                <div class="JiaMengLabel JiaMengFuWu" style="float:none">
+
+
+                    <form id="JiaMengNextSave" action="http://123.56.24.109/mybatisForSpring3/UpdateLeagueController.do" target="ser"
+                          method="post" accept-charset="UTF-8" onsubmit="document.charset='utf-8';" enctype="multipart/form-data">
+                        <input type="hidden" name="id"/>
+                        <input type="hidden" name="time">
+                        <input type="hidden" name="service">
+                        <ul>
+                            <li><input type="checkbox" value="物业通知"/> 物业通知</li>
+                            <li><input type="checkbox" value="工程报修"/> 工程报修</li>
+                            <li><input type="checkbox" value="快递代收发" checked/> 快递代收发</li>
+                            <li><input type="checkbox" value="摇摇开门"/> 摇摇开门</li>
+                            <li style="clear:both;"><input type="checkbox" value="问卷调查"/> 问卷调查</li>
+                            <li><input type="checkbox" value="跳蚤市场" checked/> 跳蚤市场</li>
+                            <li><input type="checkbox" value="商城服务" checked onClick="return false"/>
+                                商城服务
+                            </li>
+                            <li><input type="checkbox" value="到家服务" checked onclick="return false"/>
+                                到家服务
+                            </li>
+                        </ul>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="JiaMengXiang">
+        <h1>资质证件</h1>
+        <div class="JiaMengInfo UpDiv">
+            <div class="JiaMengLine">
+                <span><em>*</em>公司营业执照</span>
+                <div class="JiaMengLabel">
+                    <div class="JiaMengImg IMG1">请上传图片</div>
+                    <div class="JiaMengUBtn"><input type="button" class="JiaMengUbb" value="上传" onClick="$('#InputYingYeimg').click();">
+                        <small>( 请上传3M以下png或pdf或jpg格式图片，扫描件或照片均可 )</small>
+                    </div>
+
+
+                    <form class="YingYeiForm" action="http://123.56.24.109/mybatisForSpring3/UpdateLeagueController.do" target="pic1"
+                          method="post" accept-charset="UTF-8" onsubmit="document.charset='utf-8';" enctype="multipart/form-data">
+                        <input type="hidden" name="id">
+                        <input type="file" name="picturl1" id="InputYingYeimg" style="display:none;">
+                    </form>
+
+
+                </div>
+            </div>
+            <div class="JiaMengLine">
+                <span><em>*</em>公司税务登记证</span>
+                <div class="JiaMengLabel">
+                    <div class="JiaMengImg IMG2">请上传图片</div>
+                    <div class="JiaMengUBtn"><input type="button" class="JiaMengUbb" value="上传" onClick="$('#InputShuiWu').click();">
+                        <small>( 请上传3M以下png或pdf或jpg格式图片，扫描件或照片均可 )</small>
+                    </div>
+
+
+                    <form class="ShuiWuForm" action="http://123.56.24.109/mybatisForSpring3/UpdateLeagueController.do" target="pic2"
+                          method="post" accept-charset="UTF-8" onsubmit="document.charset='utf-8';" enctype="multipart/form-data">
+                        <input type="hidden" name="id">
+                        <input type="file" name="picturl2" id="InputShuiWu" style="display:none;">
+                    </form>
+
+
+                </div>
+            </div>
+            <div class="JiaMengLine">
+                <span><em>*</em>公司组织机构代码证</span>
+                <div class="JiaMengLabel">
+                    <div class="JiaMengImg IMG3">请上传图片</div>
+                    <div class="JiaMengUBtn"><input type="button" class="JiaMengUbb" value="上传" onClick="$('#InputZuZhi').click();">
+                        <small>( 请上传3M以下png或pdf或jpg格式图片，扫描件或照片均可 )</small>
+                    </div>
+
+
+                    <form class="ZuZhiForm" action="http://123.56.24.109/mybatisForSpring3/UpdateLeagueController.do" target="pic3"
+                          method="post" accept-charset="UTF-8" onsubmit="document.charset='utf-8';" enctype="multipart/form-data">
+                        <input type="hidden" name="id" class="subID">
+                        <input type="file" name="picturl3" id="InputZuZhi" style="display:none;">
+                    </form>
+
+
+                </div>
+            </div>
+
+            <div class="JiaMengLine">
+                <span></span>
+                <div class="JiaMengLabel">
+                    <input type="checkbox" name="AgreeXie" value="agree" checked id="AgreeXies" onclick="return false"/>
+                    我方已详细阅读，接受并同意
+                    <a href="javascript:;" target="_blank" id="tanxieyi" style="color:#F60">《条款与协议》</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="JiaMengNext">
+        <input type="text" value="提交" class="XiangNextBtn XiangNextBtnSub"/>
+    </div>
+</div>
+<div style="display: none">
+    <iframe name="ser" id="ser"></iframe>
+    <iframe name="pic1" id="pic1"></iframe>
+    <iframe name="pic2" id="pic2"></iframe>
+    <iframe name="pic3" id="pic3"></iframe>
+</div>
+
+
+<script>
+    var p1,p2,p3;p1=p2=p3=false;
+    $("input[name=id]").val(sessionStorage.code);
+
+    $("#InputYingYeimg").on("change propertychange",function () {
+        $(".YingYeiForm").submit();
+        document.getElementById("pic1").onload = function () {
+            postData(
+                    "http://123.56.24.109/mybatisForSpring3/QueryLeagueController.do", {id: sessionStorage.code},
+                    function (data) {
+                        console.log(data)
+                        if (data.length==0) {
+                            alert("上传失败，请重试！");
+                            return;
+                        }
+                        $(".IMG1").text("").append($("<img>").attr("src",data[0].picturl1));
+                        p1 = true;
+                    }
+            );
+        }
+    });
+
+    $("#InputShuiWu").on("change propertychange",function () {
+        $(".ShuiWuForm").submit();
+        document.getElementById("pic2").onload = function () {
+            postData(
+                    "http://123.56.24.109/mybatisForSpring3/QueryLeagueController.do", {id: sessionStorage.code},
+                    function (data) {
+                        if (data.length==0) {
+                            alert("上传失败，请重试！");
+                            return;
+                        }
+                        $(".IMG2").text("").append($("<img>").attr("src",data[0].picturl2));
+                        p2 = true;
+                    }
+            );
+        }
+    });
+
+    $("#InputZuZhi").on("change propertychange",function () {
+        $(".ZuZhiForm").submit();
+        document.getElementById("pic3").onload = function () {
+            postData(
+                    "http://123.56.24.109/mybatisForSpring3/QueryLeagueController.do", {id: sessionStorage.code},
+                    function (data) {
+                        if (data.length==0) {
+                            alert("上传失败，请重试！");
+                            return;
+                        }
+                        $(".IMG3").text("").append($("<img>").attr("src",data[0].picturl3));
+                        p3 = true;
+                    }
+            );
+        }
+    });
+
+    $(".XiangNextBtnSub").on("click",function (e) {
+        e.preventDefault();
+        if (!p1) {
+            alert("请上传公司营业执照！");
+            return;
+        }
+        if (!p2) {
+            alert("请上传公司税务登记证！");
+            return;
+        }
+        if (!p3) {
+            alert("请上传公司组织机构代码证！");
+            return;
+        }
+        function formatTime(str) {
+            return parseInt(str) > 9 ? str : "0" + str;
+        }
+        var date = new Date();
+        var timer = date.getFullYear() + "-" + (formatTime(parseInt(date.getMonth())+1)) + "-" + formatTime(date.getDate()) + " " + formatTime(date.getHours()) + ":" + formatTime(date.getMinutes()) + ":" + formatTime(date.getSeconds());
+        $("input[name=time]").val(timer);
+        var serVal="",ser = $("#JiaMengNextSave  input[type=checkbox]:checked");
+        for (var i=0;i<ser.length;i++) {
+            serVal += ser[i].value+" ";
+        }
+        $("input[name=service]").val(serVal);
+
+
+        $("#JiaMengNextSave").submit();
+        document.getElementById("ser").onload = function () {
+            location.href = "jahzDone.html";
+        }
+
+    })
+
+
+
+</script>
+</body>
+</html>

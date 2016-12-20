@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>管理中心 - 加盟协议设置 </title>
+    <meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="renderer" content="webkit">
+    <script src="js/jquery-1.8.3.min.js"></script><script src="js/common.js"></script>
+    <link href="styles/general.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/main.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<h1>
+<span class="action-span" style="cursor:hand;">
+    <a href="franchiseAgreement.html">返回列表</a>
+</span>
+    <span class="action-span1"><a href="main.html">管理中心</a>  - 加盟协议设置 - 编辑加盟协议 </span>
+    <div style="clear:both"></div>
+</h1>
+<div name="listForm" id="listForm">
+    <div class="list-div" id="div">
+        <table width="100%" cellspacing="1" cellpadding="2" id="list-table">
+            <tr>
+                <th colspan="2" align="left">编辑加盟协议</th>
+            </tr>
+            <tr>
+                <td width="21%" align=right>已传纸质版合作协议名称：</td>
+                <td width="79%"><input type="text" required  class='must_input' id="jia1" disabled/></td>
+            </tr>
+            <tr>
+                <td align=right>纸质版合作协议文件：</td>
+                <td>
+                    <label>
+                        <form action="http://123.56.24.109/mybatisForSpring3/UpdateLeagueDealController.do" id="doc1" enctype="multipart/form-data"
+                              accept-charset="UTF-8" onsubmit="document.charset='utf-8';" method="post" target="myIframe">
+                            <input type="hidden" name="id" value="1">
+                            <input name="doc1" type="file" id="upload1"/>
+                        </form>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td align=right>已传物业费代收协议名称：</td>
+                <td><input type="text" required  class='must_input' id="jia3" disabled/></td>
+            </tr>
+            <tr>
+                <td align=right>物业费代收协议文件：</td>
+                <td>
+                    <label>
+                        <form action="http://123.56.24.109/mybatisForSpring3/UpdateLeagueDealController.do" id="doc2" enctype="multipart/form-data"
+                              accept-charset="UTF-8" onsubmit="document.charset='utf-8';" method="post" target="myIframe2">
+                            <input type="hidden" name="id" value="1">
+                            <input name="doc2" type="file" id="upload2"/>
+                        </form>
+                    </label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input name="Submit3" type="submit" class="button" value="提交" id="btnsub"/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<iframe id="frame" name="myIframe" style="display: none;">接受信息</iframe>
+<iframe id="frame2" name="myIframe2" style="display: none;">接受信息</iframe>
+<div id="footer">
+    版权所有 &copy; 20010-2012 <a href="#" target="_blank">企业网站系统</a>，并保留所有权利。
+</div>
+<script>
+
+    requestData(
+            "http://123.56.24.109/mybatisForSpring3/QueryLeagueDealNameController.do",
+            function (data2) {
+                $("#jia1").val(data2.name1);
+                $("#jia3").val(data2.name2);
+            }
+    )
+
+    $("#btnsub").on("click",function (e) {
+        e.preventDefault();
+        var $file1 = $("#upload1").val();
+        var $file2 = $("#upload2").val();
+        if (!$file1 && !$file2) {
+            alert("没有需要提交的数据！");
+            return;
+        }
+
+        if ($file1 && !$file2) {
+            var type = $("#upload1")[0].files[0].type;
+            var res = /word/.exec(type);
+            if (!res) {
+                alert("请确认上传的纸质版合作协议为word文档！");
+                return;
+            }
+            document.getElementById("frame").onload = function () {
+                location.href = "franchiseAgreement.html";
+            }
+            $("#doc1").submit();
+            return;
+        }
+        if (!$file1 && $file2) {
+            var type = $("#upload2")[0].files[0].type;
+            var res = /word/.exec(type);
+            if (!res) {
+                alert("请确认上传的物业费代收协议为word文档！");
+                return;
+            }
+            document.getElementById("frame2").onload = function () {
+                location.href = "franchiseAgreement.html";
+            }
+            $("#doc2").submit();
+            return;
+        }
+        if ($file1 && $file2) {
+            var type = $("#upload1")[0].files[0].type;
+            var res = /word/.exec(type);
+            if (!res) {
+                alert("请确认上传的纸质版合作协议为word文档！");
+                return;
+            }
+            var type = $("#upload2")[0].files[0].type;
+            var res = /word/.exec(type);
+            if (!res) {
+                alert("请确认上传的物业费代收协议为word文档！");
+                return;
+            }
+            document.getElementById("frame").onload = function () {
+                document.getElementById("frame2").onload = function () {
+                    location.href = "franchiseAgreement.html";
+                }
+                $("#doc2").submit();
+            }
+            $("#doc1").submit();
+        }
+
+
+
+    })
+
+</script>
+</body>
+</html>

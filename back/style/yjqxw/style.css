@@ -1,0 +1,162 @@
+*{text-decoration: none;font: normal 100% "微软雅黑", Arial, Helvetica, sans-serif;}
+
+.Banaer{
+    width: 100%;
+    min-width: 1136px;
+    margin-top: 80px;
+    text-align: center;
+    color: #FFF;
+    height: 165px;
+}
+.NewsList{
+    width: 100%;
+    min-width: 1136px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+
+}
+#NewsFen{
+    height: 50px;
+    width: 1151px;
+    margin: 0 auto;
+    padding: 0 27px;
+}
+
+#NewsFen a{
+    float: left;
+    width: 215px;
+    height: 50px;
+    text-align: center;
+    border: #f6a63f solid 1px;
+    color: #f6a63f;
+    line-height: 50px;
+    margin: 0 35px;
+    font-size: 20px;
+}
+
+#NewsFen .act{
+    background: #f19591;
+    color: #ffffff;
+}
+
+#NewsFen a:hover{
+    background: #f19591;
+    color: #ffffff;
+}
+
+
+
+#NewsItemListBox>li{
+    width: 1081px;
+    padding: 50px 62px;
+    margin: 0 auto;
+
+}
+.NewsItem {
+    margin-bottom: 50px;
+}
+.NewsLeft {
+    float: left;
+    margin-right: 25px;
+}
+.NewsLeft a {
+    float: left;
+    border: solid 5px #e5e5e5;
+    color: #666666;
+}
+.NewsLeft a:hover {
+    border-color: #f6a63f;
+}
+
+.NewsLeft img {
+    width: 345px;
+    height: 260px;
+    border:none;
+}
+.NewsRight {
+    float: left;
+    width: 700px;
+    padding-top: 20px;
+}
+
+.NewsDate {
+    font-size: 23px;
+    color: #a4a4a4;
+    line-height: 35px;
+}
+.NewsRight h2 {
+    font-size: 20px;
+    color: #333333;
+    border-bottom: solid #5c5c5c 1px;
+    padding-bottom: 10px;
+}
+
+.NewsRight h2 a{
+    font-weight: bold;
+    color: #666666;
+    border: none;
+}
+
+.NewsRight p {
+    font-size: 15px;
+    line-height: 23px;
+    color: #818181;
+    margin: 15px;
+}
+.NewsDeil{
+    width: 126px;
+    height: 33px;
+    background: url("../../images/yjqxw/morenews.png");
+}
+.NewsDeil a{
+    color: #f6a63f;
+    padding-left: 10px;
+    display: block;
+    line-height: 33px;
+
+}
+div.clear {
+    font: 0px Arial;
+    line-height: 0;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+.NewsItemList{
+    display: none;
+}
+
+.loadind {
+    text-align: center;
+    margin: 10px auto;
+    display: none;
+}
+.no_more{
+    display: none;
+    text-align: center;
+    margin: 10px auto;
+    padding-top: 20px;
+}
+#GetMoreNews {
+    text-align: center;
+}
+
+#GetMoreNews a{
+    border-radius: 15px;
+    padding: 10px 80px;
+    background: #ebeaea;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+}
+#GetMoreNews a:hover{
+    cursor: pointer;
+}
+
+.Header .nav-in li:nth-child(6) a{color: #e87e30;  border-bottom-color: #e87e30;}
+
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>亿街区官方网站</title>
+    <script src="lib/script/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="style/yxal/style.css">
+    <link rel="stylesheet" href="lib/style/lib.css"/>
+
+</head>
+<body>
+<script src="lib/script/lib.js"></script>
+<!---->
+<div style="height: 81px"></div>
+<div class="case_banner"></div>
+<div class="case_wrap">
+
+</div>
+
+<form method="post" enctype="multipart/form-data" id="upclick" style="display: none"
+      accept-charset="utf-8" onsubmit="document.charset='utf-8';">
+    <input type="text" name="id" id="id">
+    <input type="text" name="click" id="click">
+</form>
+
+<script>
+    var locurl = location.href;
+    var start = locurl.indexOf("?");
+    var end = locurl.length;
+    var tempstr = locurl.substring(start + 1, end);
+    var temp = tempstr.split("=");
+    var id = temp[1];
+    var dataObj = {
+        'id': id
+    };
+
+    $.ajax({
+        url: 'http://123.56.24.109/mybatisForSpring3/QueryCaseDetialController.do',
+        type: 'POST',
+        dataType: 'json',
+        contentType: "application/json",
+        data: JSON.stringify(dataObj),
+        success: function (data) {
+            createNews(data)
+
+        },
+        error: function (err) {
+            alert("连接失败，请重试！");
+            console.warn(err);
+        }
+    });
+
+    $.ajax({
+        url: 'http://123.56.24.109/mybatisForSpring3/QueryCaseDetialController.do',
+        type: 'POST',
+        dataType: 'json',
+        data: {id: id},
+        contentType: "application/json",
+        data: JSON.stringify(dataObj),
+        success: function (data) {
+            $("#click").val(data[0].click * 1 + 1);
+            $("#id").val(data[0].id);
+            if (data.length != 0) {
+                var xhr = new XMLHttpRequest();
+                var fo = document.querySelector("#upclick");
+                var da = new FormData(fo);
+                xhr.open("POST", "http://123.56.24.109/mybatisForSpring3/UpdateCaseDetialController.do");
+                xhr.send(da);
+            }
+        },
+        error: function (err) {
+            alert("连接失败，请重试！");
+            console.warn(err);
+        }
+    });
+
+
+    function createNews(data) {
+        var case_wrap = document.querySelector('.case_wrap');
+        var cdet_head = $('<div></div>').addClass('cdet_head').appendTo(case_wrap);
+        $('<h2></h2>').text(data[0].title).appendTo(cdet_head);
+        var p = $('<p></p>').appendTo(cdet_head);
+        p.text('发布时间：' + data[0].time + '  来源：'+ data[0].source +'  阅读量：' + data[0].click);
+
+        var cdet_content = $('<div>' + data[0].detial + '</div>').addClass('cdet_content').appendTo(case_wrap)
+
+    }
+
+</script>
+</body>
+</html>

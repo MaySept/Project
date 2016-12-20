@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="renderer" content="webkit">
+    <title>亿街区官方网站</title>
+    <link rel="stylesheet" type="text/css" href="lib/style/lib.css">
+    <link rel="stylesheet" type="text/css" href="style/jmhz/jmhz.css">
+    <script src="lib/script/jquery-1.8.3.min.js"></script>
+    <script src="script/jmhz/jsAddress.js"></script>
+</head>
+<body>
+<script src="lib/script/lib.js"></script>
+
+<div class="Banaer"></div>
+
+<div class="JiaMengForm">
+    <form name="form1" id="JiaMengNowFst" >
+        <div class="JiaMengBasic">
+            <h1>基本信息</h1>
+            <div class="JiaMengInfo">
+                <div class="JiaMengLine"><span><em>*</em>填写城市</span><div class="JiaMengLabel"><select id="selProvince" class="yinhang" name="province"></select><select id="selCity" class="yinhang s_left" name="city"></select><select id="selDistrict" class="yinhang s_left" name="area"></select>
+                    <script type="text/javascript">
+                        addressInit('selProvince', 'selCity', 'selDistrict', '北京', '市辖区', '东城区');
+                    </script></div></div>
+                <div class="JiaMengLine"><span><em>*</em>公司名称</span><div class="JiaMengLabel"><input type="text" name="ComName" class="ComInput" /> <big class="ComNameNote">此为必填项</big></div></div>
+                <div class="JiaMengLine"><span><em>*</em>公司地址</span><div class="JiaMengLabel"><textarea name="ComAdd" class="ComTArea"></textarea> <big class="ComAddNote">此为必填项</big></div></div>
+            </div>
+        </div>
+        <div class="JiaMengXiang">
+            <div class="JiaMengXiangItem">
+                <h1>所管项目</h1>
+                <div class="JiaMengInfo">
+                    <div class="JiaMengLine"><span><em>*</em>项目名称</span><div class="JiaMengLabel"><input type="text" name="XiangName" class="ComInput" /> <big class="XiangNameNote">此为必填项</big></div></div>
+                    <div class="JiaMengLine"><span><em>*</em>项目地址</span><div class="JiaMengLabel"><textarea name="XiangAdd" class="ComTArea"></textarea> <big class="XiangAddNote">此为必填项</big></div></div>
+                    <div class="JiaMengLine"><span><em>*</em>项目性质</span><div class="JiaMengLabel"><input type="radio" class="ComRadio" name="XiangType" value="住宅" checked /> 住宅 <input type="radio" class="ComRadio" name="XiangType" value="写字楼" /> 写字楼 <input type="radio" class="ComRadio" name="XiangType" value="商业" /> 商业</div></div>
+                    <div class="JiaMengLine"><span><em>*</em>项目内楼</span><div class="JiaMengLabel">栋数 <input type="text" name="XiangDong" class="ComsInput" /> 户数 <input type="text" name="XiangHu" class="ComsInput" /> 人数约 <input type="text" name="XiangRen" class="ComsInput" /> <big class="XiangNeiNote">此全为必填项</big></div></div>
+                </div>
+            </div>
+            <div class="JiaMengXiangItem JiaMengXiangItem1" style="display:none;">
+                <h1>所管项目 <span onClick="clearinput(1);$('.JiaMengXiangItem1').css('display','none');">删除</span></h1>
+                <div class="JiaMengInfo">
+                    <div class="JiaMengLine"><span><em>*</em>项目名称</span><div class="JiaMengLabel"><input type="text" name="XiangName1" class="ComInput" /> <big class="XiangName1Note">此为必填项</big></div></div>
+                    <div class="JiaMengLine"><span><em>*</em>项目地址</span><div class="JiaMengLabel"><textarea name="XiangAdd1" class="ComTArea"></textarea> <big class="XiangAdd1Note">此为必填项</big></div></div>
+                    <div class="JiaMengLine"><span><em>*</em>项目性质</span><div class="JiaMengLabel"><input type="radio" class="ComRadio" name="XiangType1" value="住宅" checked /> 住宅 <input type="radio" class="ComRadio" name="XiangType1" value="写字楼" /> 写字楼 <input type="radio" class="ComRadio" name="XiangType1" value="商业" /> 商业</div></div>
+                    <div class="JiaMengLine"><span><em>*</em>项目内楼</span><div class="JiaMengLabel">栋数 <input type="text" name="XiangDong1" class="ComsInput" /> 户数 <input type="text" name="XiangHu1" class="ComsInput" /> 人数约 <input type="text" name="XiangRen1" class="ComsInput" />   <big class="XiangNei1Note">此为必填项</big></div></div>
+                </div>
+            </div>
+            <div class="JiaMengXiangItem JiaMengXiangItem2" style="display:none;">
+                <h1>所管项目 <span onClick="clearinput(2);$('.JiaMengXiangItem2').css('display','none');">删除</span></h1>
+                <div class="JiaMengInfo">
+                    <div class="JiaMengLine"><span><em>*</em>项目名称</span><div class="JiaMengLabel"><input type="text" name="XiangName2" class="ComInput" /> <big class="XiangName2Note">此为必填项</big></div></div>
+                    <div class="JiaMengLine"><span><em>*</em>项目地址</span><div class="JiaMengLabel"><textarea name="XiangAdd2" class="ComTArea"></textarea> <big class="XiangAdd2Note">此为必填项</big></div></div>
+                    <div class="JiaMengLine"><span><em>*</em>项目性质</span><div class="JiaMengLabel"><input type="radio" class="ComRadio" name="XiangType2" value="住宅" checked /> 住宅 <input type="radio" class="ComRadio" name="XiangType2" value="写字楼" /> 写字楼 <input type="radio" class="ComRadio" name="XiangType2" value="商业" /> 商业</div></div>
+                    <div class="JiaMengLine"><span><em>*</em>项目内楼</span><div class="JiaMengLabel">栋数 <input type="text" name="XiangDong2" class="ComsInput" /> 户数 <input type="text" name="XiangHu2" class="ComsInput" /> 人数约 <input type="text" name="XiangRen2" class="ComsInput" />   <big class="XiangNei2Note">此为必填项</big></div></div>
+                </div>
+            </div>
+            <div class="JiaMengXiangAdd">
+                <input type="button" value="添加" class="XiangAddBtn" onClick='if($(".JiaMengXiangItem1").css("display")=="block"){$(".JiaMengXiangItem2").show();}else{$(".JiaMengXiangItem1").show();}' >
+            </div>
+        </div>
+        <div class="JiaMengContact">
+            <h1>联系人信息</h1>
+            <div class="JiaMengInfo">
+                <div class="JiaMengLine"><span><em>*</em>姓&nbsp;&nbsp;&nbsp;名</span><div class="JiaMengLabel"><input type="text" name="RealName" class="ComInput" /> <big class="RealNameNote">此为必填项</big></div></div>
+                <div class="JiaMengLine"><span><em>*</em>电&nbsp;&nbsp;&nbsp;话</span><div class="JiaMengLabel"><input type="text" name="Mobile" class="ComInput" /> <big class="MobileNote">此为必填项,请输入正确的手机号码</big> <small>我们将在第一时间将审核结果发送到此手机</small></div></div>
+                <div class="JiaMengLine"><span><em>*</em>邮&nbsp;&nbsp;&nbsp;箱</span><div class="JiaMengLabel"><input type="text" name="Email" class="ComInput" /> <big class="EmailNote">此为必填项，请输入正确的邮箱地址</big> <small>用于给您发送亿街区登录账号以及后期找回密码，请正确填写</small></div></div>
+                <div class="JiaMengLine"><span><em>&nbsp;</em>微信号</span><div class="JiaMengLabel"><input type="text" name="Weixin" class="ComInput" /> <small>( 选填 )</small></div></div>
+            </div>
+        </div>
+        <div class="JiaMengNext"><input type="button" value="下一步" class="XiangNextBtn" onClick="dosubmit();" /><input type="hidden" name="jiameng" value="fsttep" /></div>
+    </form>
+    <script type="text/javascript">
+        function clearinput(tempi){
+            $('.JiaMengXiangItem'+tempi+' textarea').val('');
+            $('.JiaMengXiangItem'+tempi+' input[name="XiangName1"]').val('');
+            $('.JiaMengXiangItem'+tempi+' input[name="XiangDong'+tempi+'"]').val('');
+            $('.JiaMengXiangItem'+tempi+' input[name="XiangHu'+tempi+'"]').val('');
+            $('.JiaMengXiangItem'+tempi+' input[name="XiangRen'+tempi+'"]').val('');
+        }
+
+        function dosubmit(){
+
+            if($.trim($("input[name='ComName']").val())==""){
+                $(".ComNameNote").css('display','inline');
+                $("input[name='ComName']")[0].focus();
+                return false;
+            }else{
+                $(".ComNameNote").css('display','none');
+            }
+            if($.trim($("textarea[name='ComAdd']").val())==""){
+                $(".ComAddNote").css('display','inline');
+                $("textarea[name='ComAdd']")[0].focus();
+                return false;
+            }else{
+                $(".ComAddNote").css('display','none');
+            }
+            if($.trim($("input[name='XiangName']").val())==""){
+                $(".XiangNameNote").css('display','inline');
+                $("input[name='XiangName']")[0].focus();
+                return false;
+            }else{
+                $(".XiangNameNote").css('display','none');
+            }
+            if($.trim($("textarea[name='XiangAdd']").val())==""){
+                $(".XiangAddNote").css('display','inline');
+                $("textarea[name='XiangAdd']")[0].focus();
+                return false;
+            }else{
+                $(".XiangAddNote").css('display','none');
+            }
+            if($.trim($("input[name='XiangDong']").val())==""){
+                $(".XiangNeiNote").css('display','inline');
+                $("input[name='XiangDong']")[0].focus();
+                return false;
+            }else{
+                $(".XiangNeiNote").css('display','none');
+            }
+            if($.trim($("input[name='XiangHu']").val())==""){
+                $(".XiangNeiNote").css('display','inline');
+                $("input[name='XiangHu']")[0].focus();
+                return false;
+            }else{
+                $(".XiangNeiNote").css('display','none');
+            }
+            if($.trim($("input[name='XiangRen']").val())==""){
+                $(".XiangNeiNote").css('display','inline');
+                $("input[name='XiangRen']")[0].focus();
+                return false;
+            }else{
+                $(".XiangNeiNote").css('display','none');
+            }
+            if($(".JiaMengXiangItem1").css("display")=="block"){
+
+                if($.trim($("input[name='XiangName1']").val())==""){
+                    $(".XiangName1Note").css('display','inline');
+                    $("input[name='XiangName1']")[0].focus();
+                    return false;
+                }else{
+                    $(".XiangName1Note").css('display','none');
+                }
+                if($.trim($("textarea[name='XiangAdd1']").val())==""){
+                    $(".XiangAdd1Note").css('display','inline');
+                    $("textarea[name='XiangAdd1']")[0].focus();
+                    return false;
+                }else{
+                    $(".XiangAdd1Note").css('display','none');
+                }
+                if($.trim($("input[name='XiangDong1']").val())==""){
+                    $(".XiangNei1Note").css('display','inline');
+                    $("input[name='XiangDong1']")[0].focus();
+                    return false;
+                }else{
+                    $(".XiangNei1Note").css('display','none');
+                }
+                if($.trim($("input[name='XiangHu1']").val())==""){
+                    $(".XiangNei1Note").css('display','inline');
+                    $("input[name='XiangHu1']")[0].focus();
+                    return false;
+                }else{
+                    $(".XiangNei1Note").css('display','none');
+                }
+                if($.trim($("input[name='XiangRen1']").val())==""){
+                    $(".XiangNei1Note").css('display','inline');
+                    $("input[name='XiangRen1']")[0].focus();
+                    return false;
+                }else{
+                    $(".XiangNei1Note").css('display','none');
+                }
+
+            }
+            if($(".JiaMengXiangItem2").css("display")=="block"){
+
+                if($.trim($("input[name='XiangName2']").val())==""){
+                    $(".XiangName2Note").css('display','inline');
+                    $("input[name='XiangName2']")[0].focus();
+                    return false;
+                }else{
+                    $(".XiangName2Note").css('display','none');
+                }
+                if($.trim($("textarea[name='XiangAdd2']").val())==""){
+                    $(".XiangAdd2Note").css('display','inline');
+                    $("textarea[name='XiangAdd2']")[0].focus();
+                    return false;
+                }else{
+                    $(".XiangAdd2Note").css('display','none');
+                }
+                if($.trim($("input[name='XiangDong2']").val())==""){
+                    $(".XiangNei2Note").css('display','inline');
+                    $("input[name='XiangDong2']")[0].focus();
+                    return false;
+                }else{
+                    $(".XiangNei2Note").css('display','none');
+                }
+                if($.trim($("input[name='XiangHu2']").val())==""){
+                    $(".XiangNei2Note").css('display','inline');
+                    $("input[name='XiangHu2']")[0].focus();
+                    return false;
+                }else{
+                    $(".XiangNei2Note").css('display','none');
+                }
+                if($.trim($("input[name='XiangRen2']").val())==""){
+                    $(".XiangNei2Note").css('display','inline');
+                    $("input[name='XiangRen2']")[0].focus();
+                    return false;
+                }else{
+                    $(".XiangNei2Note").css('display','none');
+                }
+
+            }
+            if($.trim($("input[name='RealName']").val())==""){
+                $(".RealNameNote").css('display','inline');
+                $("input[name='RealName']")[0].focus();
+                return false;
+            }else{
+                $(".RealNameNote").css('display','none');
+            }
+            if($.trim($("input[name='Mobile']").val())==""){
+                $("input[name='Mobile']").siblings('small').hide();
+                $(".MobileNote").css('display','inline');
+                $("input[name='Mobile']")[0].focus();
+                return false;
+            }else{
+                var phone = $.trim($("input[name='Mobile']").val());
+                if(phone && /^1[3|4|5|8|7]\d{9}$/.test(phone)){
+                    $(".MobileNote").css('display','none');
+                } else{
+                    $("input[name='Mobile']").siblings('small').hide();
+                    $(".MobileNote").text('请填写正确的手机号码!');
+                    $(".MobileNote").css('display','inline');
+                    return false;
+                }
+            }
+            if($.trim($("input[name='Email']").val())==""){
+                $("input[name='Email']").siblings('small').hide();
+                $(".EmailNote").css('display','inline');
+                $("input[name='Email']")[0].focus();
+                return false;
+            }else{
+                var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+                if(!myreg.test($.trim($("input[name='Email']").val())) ){
+                    $("input[name='Email']").siblings('small').hide();
+                    $(".EmailNote").text('请填写正确邮箱!');
+                    $(".EmailNote").css('display','inline');
+                    return false;
+                }else{
+                    $(".EmailNote").css('display','none');
+                }
+            }
+
+//            $('#JiaMengNowFst').submit();
+            function getValue(sp) {
+                var str = "",len = arguments.length;
+                for (var i=1;i<len;i++) {
+                    str = str + $("*[name="+arguments[i]+"]").val() + sp;
+                }
+                return str
+            }
+
+            var cname,caddress,pro,name,phone,email,weixin;
+            cname = getValue("","ComName");
+            caddress = getValue("","province","city","area","ComAdd");
+            pro = "【项目一："+ getValue("，","XiangName","XiangAdd","XiangType")+getValue("栋","XiangDong")+getValue("户","XiangHu") + getValue("人","XiangRen") +"】";
+            pro += " 【项目二："+ getValue("，","XiangName1","XiangAdd1","XiangType1")+getValue("栋","XiangDong1")+getValue("户","XiangHu1") + getValue("人","XiangRen1") +"】";
+            pro += " 【项目三："+ getValue("，","XiangName2","XiangAdd2","XiangType2")+getValue("栋","XiangDong2")+getValue("户","XiangHu2") + getValue("人","XiangRen2") +"】";
+            name = getValue("", "RealName");
+            phone = getValue("", "Mobile");
+            email = getValue("","Email");
+            weixin = getValue("", "Weixin");
+            var info = {
+                name:name,
+                weixin:weixin,
+                phone:phone,
+                email:email,
+                cname:cname,
+                address:caddress,
+                function:pro
+            }
+            $.ajax({
+                url:"http://123.56.24.109/mybatisForSpring3/AddLeagueJsonController.do",
+                type:'POST',
+                dataType:'json',
+                contentType:"application/json",
+                data:JSON.stringify(info),
+                success:function (data) {
+                    if (!data.result) {
+                        alert("提交失败，请重试！");
+                        return false;
+                    }
+                    sessionStorage.code = data.result;
+                    location.href = "jmhz3.html";
+                },
+                error:function (err) {
+                    alert("连接失败，请重试！");
+                    console.warn(err);
+                }
+            })
+
+            return false;
+
+        }
+    </script>
+</div>
+</body>
+</html>

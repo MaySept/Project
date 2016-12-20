@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>管理中心 - 新闻资讯管理 </title>
+    <meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="renderer" content="webkit">
+    <script src="js/jquery-1.8.3.min.js"></script><script src="js/common.js"></script>
+    <link href="styles/general.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/main.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="styles/jHtmlArea.css">
+
+    <script src="js/jHtmlArea-0.8.js"></script>
+</head>
+<body>
+<h1>
+<span class="action-span" style="cursor:hand;">
+<a href="aboutTeam.html">返回列表</a>
+</span>
+    <span class="action-span1"><a href="main.html">管理中心</a>  - 亿街区团队管理 - 团队管理 </span>
+    <div style="clear:both"></div>
+</h1>
+
+
+<form method="post" action="http://123.56.24.109/mybatisForSpring3/UpdateAboutController.do"
+      enctype="multipart/form-data"
+      name="listForm" accept-charset="utf-8" onsubmit="document.charset='utf-8';" target="myIframe" id="upform">
+    <div class="list-div" id="listDiv">
+        <table width="100%" cellspacing="1" cellpadding="2" id="list-table">
+            <tr>
+                <th colspan="2" align="left">团队管理</th>
+            </tr>
+            <tr>
+                <td align=right>团　　队：</td>
+                <td>
+                    <!--<input name="platform" type="text" required  />-->
+                    <textarea id="subject" name="platform" cols="100" rows="3"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td height="20"></td>
+                <td height="20"></td>
+            </tr>
+
+            <tr>
+                <td align=right valign=top>功能介绍：</td>
+                <td>
+                    <textarea id="jHtml1" cols="100" rows="30"></textarea>
+                    <textarea id="textarea1" name="function" cols="50" rows="15" style="display: none"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td align=right valign=top>关于我们：</td>
+                <td>
+                    <textarea id="jHtml2" cols="100" rows="30"></textarea>
+                    <textarea id="textarea2" name="about" cols="50" rows="15" style="display: none"></textarea>
+                </td>
+            </tr>
+
+            <input type="hidden" name="id" value="1">
+
+            <tr>
+                <td height="20"></td>
+                <td height="20"></td>
+            </tr>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" name="Submit" value="提交" class="button" id="btnsub"/>
+                    　
+                    <input type="reset" name="Submit2" value="重置" class="button"/></td>
+            </tr>
+        </table>
+    </div>
+</form>
+<form id="img1" style="display: none">
+    <input type="file" name="img" id="inIMG1">
+</form>
+<form id="img2" style="display: none">
+    <input type="file" name="img" id="inIMG2">
+</form>
+<iframe id="frame" name="myIframe" style="display: none;">接受信息</iframe>
+<div id="footer">
+    版权所有 &copy; 20010-2012 <a href="#" target="_blank">企业网站系统</a>，并保留所有权利。
+</div>
+<script>
+    $(function () {
+        var formIMG1 = document.querySelector("#img1"), $inIMG1 = $("#inIMG1");
+        var formIMG2 = document.querySelector("#img2"), $inIMG2 = $("#inIMG2");
+
+        $("#jHtml1").htmlarea({
+            toolbar: [
+                ["html"], ["bold", "italic", "underline", "strikethrough", "|", "subscript", "superscript"],
+                ["increasefontsize", "decreasefontsize"],
+                ["orderedlist", "unorderedlist"],
+                ["indent", "outdent"],
+                ["justifyleft", "justifycenter", "justifyright"],
+                ["link", "unlink", "horizontalrule"],
+                ["p", "h1", "h2", "h3", "h4", "h5", "h6"],
+                ["cut", "copy", "paste"],
+                [{
+                    css: "image",
+                    text: "Custom Toolbar Button",
+                    action: function (btn) {
+                        var self = this;
+                        $inIMG1.click();
+
+                        $("#inIMG1").on("change propertychange", function () {
+                            if ($inIMG1.val()) {
+                                var fd = new FormData(formIMG1);
+                                $inIMG1.val("");
+                                var xhr = new XMLHttpRequest();
+                                xhr.onreadystatechange = function () {
+                                    if (xhr.readyState == 4) {
+                                        var width=prompt("设置图片宽度","400");
+                                        self.pasteHTML("<img src='" + JSON.parse(xhr.responseText).result + "' width='"+ width+"'/>");
+                                    }
+                                }
+                                xhr.open("POST", "http://123.56.24.109/mybatisForSpring3/GetFileuploadUrlController.do");
+                                xhr.send(fd);
+                            }
+                        })
+                    }
+                }]
+            ]
+        });
+
+        $("#jHtml2").htmlarea({
+            toolbar: [
+                ["html"], ["bold", "italic", "underline", "strikethrough", "|", "subscript", "superscript"],
+                ["increasefontsize", "decreasefontsize"],
+                ["orderedlist", "unorderedlist"],
+                ["indent", "outdent"],
+                ["justifyleft", "justifycenter", "justifyright"],
+                ["link", "unlink", "horizontalrule"],
+                ["p", "h1", "h2", "h3", "h4", "h5", "h6"],
+                ["cut", "copy", "paste"],
+                [{
+                    css: "image",
+                    text: "Custom Toolbar Button",
+                    action: function (btn) {
+                        var self = this;
+                        $inIMG2.click();
+
+                        $("#inIMG2").on("change propertychange", function () {
+                            if ($inIMG2.val()) {
+                                var fd = new FormData(formIMG2);
+                                $inIMG2.val("");
+                                var xhr = new XMLHttpRequest();
+                                xhr.onreadystatechange = function () {
+                                    if (xhr.readyState == 4) {
+                                        var width=prompt("设置图片宽度","400");
+                                        self.pasteHTML("<img src='" + JSON.parse(xhr.responseText).result + "' width='"+ width+"'/>");
+                                    }
+                                }
+                                xhr.open("POST", "http://123.56.24.109/mybatisForSpring3/GetFileuploadUrlController.do");
+                                xhr.send(fd);
+                            }
+                        })
+                    }
+                }]
+            ]
+        });
+
+
+        requestData(
+                "http://123.56.24.109/mybatisForSpring3/QueryAboutController.do",
+                function (data) {
+                    autoValue(data);
+                    $("#jHtml1").htmlarea("html", $("#textarea1").val());
+                    $("#jHtml2").htmlarea("html", $("#textarea2").val());
+                }
+        )
+
+        $("#btnsub").on("click", function (e) {
+            e.preventDefault();
+            $("#textarea1").val($("#jHtml1").htmlarea("html"));
+            $("#textarea2").val($("#jHtml2").htmlarea("html"));
+//            $("form[name=listForm]").submit();
+            var info = {
+                id:"1",
+                platform:$("textarea[name='platform']").val(),
+                function:$("#jHtml1").htmlarea("html"),
+                about:$("#jHtml2").htmlarea("html")
+            }
+            console.log(info);
+
+            postData(
+                    "http://123.56.24.109/mybatisForSpring3/UpdateAboutController.do",info,
+                    function (data) {
+                        if (data.result==0) {
+                            alert("编辑成功！");
+                            location.href = "aboutTeam.html";
+                            window.navigate("aboutTeam.html");
+                        }else{
+                            alert("编辑失败，请重试！");
+                        }
+                    }
+            )
+        })
+    });
+</script>
+</body>
+</html>

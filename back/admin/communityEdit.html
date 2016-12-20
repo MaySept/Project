@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>管理中心 - 小区管理 </title>
+    <meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="renderer" content="webkit">
+    <script src="js/jquery-1.8.3.min.js"></script><script src="js/common.js"></script>
+    <link href="styles/general.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/main.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<h1>
+<span class="action-span" style="cursor:hand;">
+<a href="communityManage.html">返回列表</a>
+</span>
+    <span class="action-span1"><a href="main.html">管理中心</a>  - 小区管理 - 添加小区 </span>
+    <div style="clear:both"></div>
+</h1>
+
+
+<form method="post" action="http://123.56.24.109/mybatisForSpring3/UpdateAreaDetialController.do" enctype="multipart/form-data"
+      name="listForm" accept-charset="utf-8" onsubmit="document.charset='utf-8';" target="myIframe">
+    <div class="list-div" id="listDiv">
+        <table width="100%" cellspacing="1" cellpadding="2" id="list-table">
+            <tr>
+                <th colspan="2" align="left">添加小区</th>
+            </tr>
+            <tr style="display:none;">
+                <td align=right>id：</td>
+                <td><input name="id" type="text" required d/></td>
+            </tr>
+            <tr>
+                <td align=right>小区名称：</td>
+                <td><input name="title" type="text" required class='must_input' id="subject" d/></td>
+            </tr>
+            <tr>
+                <td align=right valign=top>物业类型：</td>
+                <td><select name="type">
+                    <option value="住宅">住宅</option>
+                    <option value="写字楼">写字楼</option>
+                    <option value="商业">商业</option>
+                    <option value="写字楼商业">写字楼商业</option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+                <td align=right>所属省份：</td>
+                <td><select name="detial" id="pid" class="must_select">
+                    <!--<option value="none">请选择</option>-->
+                </select></td>
+            </tr>
+
+            <tr>
+                <td align=right>状　　态：</td>
+                <td>
+                    <select name="state" id="isvalid">
+
+                        <option value="1">显示</option>
+
+                        <option value="0">隐藏</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td align=right>排 序 号：</td>
+                <td><input name="sortnumber" type="text" required placeholder="数字类型" class='input' id="orders" value="0"/></td>
+            </tr>
+            <tr>
+                <td align=right>点击数：</td>
+                <td><input name="click" type="text" required placeholder="数字类型" class='input' id="hits" value="0"/></td>
+            </tr>
+            <tr>
+                <td align=right>推　　荐：</td>
+                <td><label>
+                    <select name="recommand" id="istop">
+                        <option value="1">是</option>
+                        <option value="0" selected="selected">否</option>
+                    </select>
+                </label></td>
+            </tr>
+            <tr>
+                <td align=right>二维码图片：</td>
+                <td><label>
+                    <input name="myfiles" type="file" id="upload"/> 建议尺寸 宽 280px 高 280px
+                </label></td>
+            </tr>
+            <tr>
+                <td align=right>已传图片：</td>
+                <td><img id="img" width="100" height="100"></td>
+            </tr>
+
+            <!--<tr style="display:none;">-->
+                <!--<td align=right valign=top>简介(预留)：</td>-->
+                <!--<td><input name="jianjie" type="text" required class='input' id="jianjie"/></td>-->
+            <!--</tr>-->
+            <!--<tr style="display: none;">-->
+                <!--<td align=right valign=top>内容(预留)：</td>-->
+                <!--<td><textarea name="content" style="width:660px;height:350px;"></textarea></td>-->
+            <!--</tr>-->
+
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" name="Submit" value="提交" class="button" onclick="goBack('communityManage.html')"/>
+                    　
+                    <input type="reset" name="Submit2" value="重置" class="button"/></td>
+            </tr>
+        </table>
+    </div>
+</form>
+<iframe id="frame" name="myIframe" style="display: none;">接受信息</iframe>
+<div id="footer">
+    版权所有 &copy; 20010-2012 <a href="#" target="_blank">企业网站系统</a>，并保留所有权利。
+</div>
+<script>
+    requestData(
+            "http://123.56.24.109/mybatisForSpring3/QueryAreaController.do",
+            function (data) {
+                for (var i=0,j=data.length;i<j;i++) {
+                    $("#pid").append($("<option></option>").val(data[i].title).text(data[i].title));
+                }
+                postData(
+                        "http://123.56.24.109/mybatisForSpring3/QueryAreaDetialController.do",{id:sessionStorage.code},
+                        function (data) {
+                            autoValue(data);
+                            $("#img").attr("src", data[0].picurl);
+                        }
+                )
+            }
+    )
+</script>
+</body>
+</html>

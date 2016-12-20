@@ -1,0 +1,107 @@
+.news-container-swiper{
+    background: #f6f6f6;
+}
+.news-title h1{
+    margin-top: 43px;
+}
+.news-title h5{
+    color: #00A686;
+}
+.news-title h6{
+    color: #a3a3a3;
+}
+.news-container .threeBlockPosition{
+    margin: 19px 0 0 0 ;
+}
+.news-container .threeBlockPositionBlock{
+    margin: 0;
+    width: 365px;
+    height: 515px;
+}
+.news-container .threeBlockPositionBlock{
+    border-right: 1px solid #000;
+}
+.news-container .threeBlockPositionBlock .news-co-ul-li-a-img{
+    border-right: 1px solid #f6f6f6;
+}
+.news-container  .threeBlockPositionBlock2{
+    width: 385px;
+}
+.news-co-ul-li-a-img{
+    width: 100%;
+}
+.news-container .threeBlockPosition .hoverBefore1{
+    background: url("../../images/index/dongtai.png");
+    margin: 0 auto;
+}
+.news-container .threeBlockPosition .hoverBefore2{
+    background: url("../../images/index/meiti.png");
+    margin: 0 auto;
+}
+.news-container .threeBlockPosition  .hoverBefore3{
+    background: url("../../images/index/huodong.png");
+    margin: 0 auto;
+}
+.news-co-ul-li-a1:hover .hoverBefore1{
+    background: url("../../images/index/dongtai_h.png");
+}
+.news-co-ul-li-a2:hover .hoverBefore2{
+    background: url("../../images/index/meiti_h.png");
+}
+.news-co-ul-li-a3:hover .hoverBefore3{
+    background: url("../../images/index/huodong_h.png");
+}
+.news-co-ul-li-a-img h3{
+    margin: 20px auto 0;
+    color: #000;
+    font-size: 25px;
+    line-height: 35px;
+}
+.news-co-ul-li-a1:hover h3{
+    color: #00A686;
+}
+.news-co-ul-li-a2:hover h3{
+    color: #00A686;
+}
+.news-co-ul-li-a3:hover h3{
+    color: #00A686;
+}
+.news-co-ul-li-text  ul{
+    margin-top: 5px;
+}
+.news-co-ul-li-text  ul li{
+    padding-left: 25px;
+    height: 25px;
+    background: url("../../images/index/li.png")no-repeat 10px 10px;
+    margin: 0;
+}
+.news-co-ul-li-text  ul li a{
+    font-size: 13px;
+    color: #878787;
+    display: block;
+    text-align: left;
+    height: 25px;
+    line-height: 25px;
+}
+.news-co-ul-li-text  ul{
+    padding-left: 50px;
+}
+.news-container  .threeBlockPositionBlock2  ul{
+    padding-left: 70px;
+}
+.news-container .threeBlockPositionBlock3{
+    border: 0;
+}
+.news-co-ul-li-more{
+    margin-top: 20px;
+    display: block;
+}
+.news-co-ul-li-text ul li:hover a{
+    color: #f40;
+}
+.news-container  .threeBlockPositionBlock  .hoverBefore{
+    display: block;
+    width: 148px ;
+    height: 148px;
+    margin: 0px auto 20px;
+}

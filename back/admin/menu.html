@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+    <meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="renderer" content="webkit">
+    <script src="js/jquery-1.8.3.min.js"></script><script src="js/common.js"></script>
+    <link href="styles/general.css" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+        body {
+            background: #80BDCB;
+        }
+
+        #tabbar-div {
+            background: #278296;
+            padding-left: 10px;
+            height: 21px;
+            padding-top: 0px;
+        }
+
+        #tabbar-div p {
+            margin: 1px 0 0 0;
+        }
+
+        .tab-front {
+            color: #FFFFFF;
+            background: #80BDCB;
+            line-height: 20px;
+            font-weight: bold;
+            padding: 4px 15px 4px 18px;
+            border-right: 2px solid #335b64;
+            cursor: hand;
+            cursor: pointer;
+        }
+
+        .tab-back {
+            color: #F4FAFB;
+            line-height: 20px;
+            padding: 4px 15px 4px 18px;
+            cursor: hand;
+            cursor: pointer;
+        }
+
+        .tab-hover {
+            color: #F4FAFB;
+            line-height: 20px;
+            padding: 4px 15px 4px 18px;
+            cursor: hand;
+            cursor: pointer;
+            background: #2F9DB5;
+        }
+
+        #top-div {
+            padding: 3px 0 2px;
+            background: #BBDDE5;
+            margin: 5px;
+            text-align: center;
+        }
+
+        #main-div {
+            border: 1px solid #345C65;
+            padding: 5px;
+            margin: 5px;
+            background: #FFF;
+        }
+
+        #menu-list {
+            padding: 0;
+            margin: 0;
+        }
+
+        #menu-list ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            color: #335B64;
+        }
+
+        #menu-list li {
+            padding-left: 16px;
+            line-height: 26px;
+            cursor: hand;
+            cursor: pointer;
+        }
+
+        #main-div a:visited, #menu-list a:link, #menu-list a:hover {
+            color: #335B64;
+            text-decoration: none;
+        }
+
+        #menu-list a:active {
+            color: #EB8A3D;
+        }
+
+        .explode {
+            background: url(images/menu_minus.gif) no-repeat 0px 9px;
+            font-weight: bold;
+            display: none;
+        }
+
+        .collapse {
+            background: url(images/menu_plus.gif) no-repeat 0px 9px;
+            font-weight: bold;
+        }
+
+        .menu-item {
+            background: url(images/menu_arrow.gif) no-repeat 0px 9px;
+            font-weight: normal;
+        }
+
+        #help-title {
+            font-size: 14px;
+            color: #000080;
+            margin: 5px 0;
+            padding: 0px;
+        }
+
+        #help-content {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tips {
+            color: #CC0000;
+        }
+
+        .link {
+            color: #000099;
+        }
+    </style>
+
+</head>
+<body>
+<div id="tabbar-div">
+    <p>
+        <span class="tab-front" id="menu-tab">菜单</span>
+    </p>
+</div>
+<div id="main-div">
+    <div id="menu-list">
+        <ul>
+            <li class="explode p1 p4" key="06_promotion" name="menu">
+                合作伙伴管理
+                <ul>
+                    <li class="menu-item"><a href="partnerCategory.html" target="main-frame">伙伴类别</a></li>
+                    <li class="menu-item"><a href="partnerManage.html" target="main-frame">伙伴管理</a></li>
+                </ul>
+            </li>
+            <li class="explode p2 p4" key="02_base" name="menu">
+                网站单页管理
+                <ul>
+                    <li class="menu-item"><a href="singlePageCategory.html" target="main-frame">单页类别</a></li>
+
+                    <li class="menu-item"><a href="singlePageCategoryManage.html" target="main-frame">单页管理</a></li>
+
+                </ul>
+            </li>
+            <li class="explode p3 p4" key="02_base" name="menu">
+                覆盖小区管理
+                <ul>
+                    <li class="menu-item"><a href="districtManage.html" target="main-frame">地区管理</a></li>
+
+                    <li class="menu-item"><a href="communityManage.html" target="main-frame">小区管理</a></li>
+
+                </ul>
+            </li>
+            <li class="explode p2 p4" key="02_base" name="menu">
+                亿街区新闻管理
+                <ul>
+                    <li class="menu-item"><a href="informationCategory.html" target="main-frame">资讯类别</a></li>
+
+                    <li class="menu-item"><a href="articleManage.html" target="main-frame">文章管理</a></li>
+
+                </ul>
+            </li>
+            <li class="explode p4" key="02_base" name="menu">
+                优秀案例管理
+                <ul>
+                    <li class="menu-item"><a href="caseCategory.html" target="main-frame">优秀案例类别</a></li>
+
+                    <li class="menu-item"><a href="caseManage.html" target="main-frame">优秀案例管理</a></li>
+                    <li class="menu-item"><a href="videoManage.html" target="main-frame">视频管理</a></li>
+                </ul>
+            </li>
+
+            <li class="explode p0 p4" key="06_prodmotion" name="menu">
+                亿街团队管理
+                <ul>
+                    <li class="menu-item"><a href="aboutTeam.html" target="main-frame">团队介绍</a></li>
+                    <li class="menu-item"><a href="personManage.html" target="main-frame">人才管理</a></li>
+                    <li class="menu-item"><a href="recruitingManage.html" target="main-frame">招聘管理</a></li>
+                </ul>
+            </li>
+            <li class="explode p3 p4" key="06_probmotion" name="menu">
+                在线加盟管理
+                <ul>
+                    <li class="menu-item"><a href="franchiseAgreement.html" target="main-frame">加盟协议</a></li>
+                    <li class="menu-item"><a href="franchiseManage.html" target="main-frame">加盟管理</a></li>
+                </ul>
+            </li>
+
+            <li class="explode p2 p4" key="06_promotion" name="menu">
+                幻灯管理
+                <ul>
+                    <li class="menu-item"><a href="slideManage.html" target="main-frame">幻灯管理</a></li>
+                </ul>
+            </li>
+            <li class="explode p4" key="06_promotion" name="menu">
+                友情链接
+                <ul>
+                    <li class="menu-item"><a href="link.html" target="main-frame">友情链接</a></li>
+                </ul>
+            </li>
+            <li class="explode p4" key="06_stats" name="menu">
+                系统用户管理
+                <ul>
+
+                    <li class="menu-item"><a href="powerAdd.html" target="main-frame">添加用户</a></li>
+
+                    <li class="menu-item"><a href="power.html" target="main-frame">用户列表</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+
+    var lis = document.getElementsByClassName("explode");
+    for (var i = 0, j = lis.length; i < j; i++) {
+        lis[i].childNodes[1].style.display = "block";
+        lis[i].onclick = function (e) {
+            if (e.srcElement == this) {
+                var ele = this.childNodes[1];
+                ele.style.display == "block" ?
+                        (ele.style.display = "none",this.style.backgroundImage = "url(images/menu_plus.gif)" ):
+                        (ele.style.display = "block",this.style.backgroundImage = "url(images/menu_minus.gif)");
+            }
+        }
+    }
+    (function () {
+        var power = sessionStorage.power;
+        var show = document.getElementsByClassName("p"+power);
+        for (var i=0,j=show.length;i<j;i++) {
+            show[i].style.display = "block";
+        }
+    })();
+</script>
+
+
+</body>
+</html>

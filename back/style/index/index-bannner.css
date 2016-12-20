@@ -1,0 +1,42 @@
+.banner-container{
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+}
+.bannerImageBody{
+    width: 100%;
+    height: 100%;
+}
+.bannerImageBlock{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    display: none;
+    filter:alpha(opacity=0);
+    opacity: 0;
+    z-index: 0;
+}
+.bannerImage{
+    display: block;
+    width: 1600px;
+    height: 100%;
+}
+.buttonCompilations{
+    height: 20px;
+    position: absolute;
+    width: 1600px;
+    bottom: 70px;
+    z-index: 10;
+}
+.banner-button{
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    margin: 3px;
+    border: 1px solid transparent;
+}
+.button-hover{
+    border: 1px solid #fff;
+    background: transparent;
+}

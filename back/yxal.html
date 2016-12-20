@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>亿街区官方网站</title>
+    <script src="lib/script/jquery-1.8.3.min.js"></script>
+    <link href="style/yxal/yxal.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="lib/style/lib.css">
+
+</head>
+<body>
+<script src="lib/script/lib.js"></script>
+<!--案例主体-->
+<div class="case_body">
+
+    <!--案例顶部-->
+    <div class="case_top"></div>
+
+    <!--案例横幅-->
+    <div class="case_inner"></div>
+
+    <!--案例中部-->
+    <div class="case_middle">
+        <div class="case_middle_inner">
+
+            <!--&lt;!&ndash;例子图片&ndash;&gt;-->
+            <div class="case_middle_inner_Image">
+            </div>
+            <div class="clear"></div>
+
+
+            <div class="case_middle_inner_video">
+                <video quality="high" height="410" width="680" align="middle" controls></video>
+            </div>
+
+            <!--视频介绍-->
+            <div class="case_middle_inner_intro">
+
+                <div class="cmii_title">亿街区，一站式智慧物业解决方案</div>
+
+                <div class="cmii_txt">
+                    <p style="text-align:justify;font-size:10.5px;font-family:Helvetica;">
+                        <span style="font-size:14px;">亿街区致力于为物业公司打造智慧物业和提升社区服务品质，提供全方位的智慧物业服务系统、运营服务、数据服务、管理培训和顾问咨询服务等一站式解决方案，帮助物业公司改善经营状况，实现提高人工效能、增加经营收益、提高服务品质，快速、高效的实现物业服务管理智慧化。</span>
+                    </p>
+                    <p style="text-align:justify;font-size:10.5px;font-family:Helvetica;">
+                        <span style="font-size:14px;">亿街区现覆盖全国四大区域、20个主力城市、上百个中高端住宅项目、覆盖客户超过60万人。可实现物业通知、物业费代缴、智能门禁、工程报修、快递代收发、项目核查、维修抢单、问卷调查、社区商城、各种到家服务、跳蚤市场等十余大功能板块，远洋集团所有项目已全部使用亿街区平台所有功能。</span><span
+                            style="font-family:&#39;sans serif&#39;, tahoma, verdana, helvetica;font-size:14px;"></span>
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        $.ajax({
+            url: 'http://123.56.24.109/mybatisForSpring3/QueryCaseDetialController.do',
+            type: 'POST',
+            dataType: 'json',
+            contentType: "application/json",
+            success: function (data) {
+                createContent(data);
+            },
+            error: function (err) {
+                alert("连接失败，请重试！");
+                console.warn(err);
+            }
+        });
+
+        $.ajax({
+            url:'http://123.56.24.109/mybatisForSpring3/QueryVideoController.do',
+            type: 'POST',
+            dataType: 'json',
+            contentType: "application/json",
+            success: function (data) {
+                $("video").attr("src", data[0].url);
+            },
+            error: function (err) {
+                alert("连接失败，请重试！");
+                console.warn(err);
+            }
+        })
+
+
+
+        function createContent(data) {
+            var content = document.querySelector('.case_middle_inner_Image');
+
+            for (var i = 0; i < data.length; i++) {
+                if (!data[i]) continue;
+                var cmiI_item = document.createElement('div');
+                cmiI_item.className = 'cmiI_item';
+                var a = document.createElement('a');
+                a.className = 'photo';
+
+                a.href='yxal10.html?id='+data[i].id;
+                a.target="_self";
+                var span = document.createElement('span');
+                span.className = 'city';
+                span.innerHTML = data[i].city;
+                var img = document.createElement('img');
+                img.style.height = '184px';
+                img.style.width = '304px';
+                img.src = data[i].picurl;
+
+                var dl = document.createElement('dl');
+                var an = document.createElement('a');
+                an.className = 'name';
+                an.href='yxal'+i+'.html?id='+data[i].id;
+                an.target="_self";
+                an.innerHTML = data[i].title;
+
+                content.appendChild(cmiI_item);
+                cmiI_item.appendChild(a);
+                a.appendChild(span);
+                a.appendChild(img);
+                cmiI_item.appendChild(dl);
+                dl.appendChild(an);
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

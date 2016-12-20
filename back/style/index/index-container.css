@@ -1,0 +1,82 @@
+.introduce-title{
+    margin-top: 70px ;
+    overflow: hidden;
+}
+.introduce-title h1{
+    margin-top: 23px;
+    color: #b8b8b8;
+}
+.introduce-title h5{
+    margin: 15px 0 0 0;
+    color: #26d7bd;
+}
+.introduce-title h6{
+    margin-top: 10px;
+    color: #a3a3a3;
+}
+.introduce-container .threeBlockPosition{
+    margin-left: -155px;
+}
+.introduce-container .threeBlockPosition .hoverBefore1{
+    background: url("../../images/index/ItemOne.png");
+}
+.introduce-container .threeBlockPosition .hoverBefore2{
+    background: url("../../images/index/ItemTwo.png");
+}
+.introduce-container .threeBlockPosition  .hoverBefore3{
+    background: url("../../images/index/ItemThd.png");
+}
+.introduce-container .threeBlockPosition p{
+    margin-top: 10px;
+}
+.introduce-container .news-co-ul-li-a-img h3{
+    color: #26d7bd;
+}
+.down{
+    margin-right: -40px;
+}
+.down div {
+    float: left;
+    margin-right: 40px;
+    width: 108px;
+    height: 1px;
+    padding-top: 109px ;
+    color: #b7b7b7;
+    font-size: 18px;
+}
+.androidDown{
+    background:url("../../images/index/erweima.jpg") ;
+}
+.IOSDown{
+    background:url("../../images/index/erweimaxp.jpg") ;
+}
+.introduce-container .threeBlockPositionBlock1:hover .hoverBefore1{
+    background: url("../../images/index/ItemOne_h.png");
+}
+.introduce-container .threeBlockPositionBlock2:hover .hoverBefore2{
+    background: url("../../images/index/ItemTwo_h.png");
+}
+.introduce-container .threeBlockPositionBlock3:hover .hoverBefore3{
+    background: url("../../images/index/ItemThd_h.png");
+}
+.introduce-container .threeBlockPositionBlock1:hover h3{
+      color: #ec6c00;
+  }
+.introduce-container .threeBlockPositionBlock2:hover h3{
+    color: #ec6c00;
+}
+.introduce-container .threeBlockPositionBlock3:hover h3{
+    color: #ec6c00;
+}
+.introduce-container  .threeBlockPositionBlock  .hoverBefore{
+    display: block;
+    width: 148px ;
+    height: 148px;
+    margin: 20px auto;
+}
+.androidDown:hover{
+    color: #ec6c00;
+}
+.IOSDown:hover{
+    color: #ec6c00;
+}
